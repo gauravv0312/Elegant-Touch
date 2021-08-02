@@ -13,6 +13,10 @@ import android.view.ViewGroup;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.FragmentRegisterBinding;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 
 public class RegisterFragment extends Fragment {
 FragmentRegisterBinding binding;
@@ -59,6 +63,20 @@ FragmentRegisterBinding binding;
     }
 
     public void userregister(String email, String password, String phone) {
+        Call<signup_response_mode> call=apicontroller.getInstance()
+                                        .getapi()
+                                        .getregister(name,email,mobile);
 
+        call.enqueue(new Callback<signup_response_mode>() {
+            @Override
+            public void onResponse(Call<signup_response_mode> call, Response<signup_response_mode> response) {
+                
+            }
+
+            @Override
+            public void onFailure(Call<signup_response_mode> call, Throwable t) {
+
+            }
+        });
     }
 }
