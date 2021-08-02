@@ -27,7 +27,7 @@ public class SplashscreenActivity extends AppCompatActivity {
         bottom_anim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.bottom);
         binding.logo.setAnimation(top_anim);
         binding.desc.setAnimation(bottom_anim);
-        binding.name.setAnimation(bottom_anim);
+        binding.fullname.setAnimation(bottom_anim);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

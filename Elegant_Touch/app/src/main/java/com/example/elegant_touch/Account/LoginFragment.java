@@ -24,6 +24,8 @@ public class LoginFragment extends Fragment {
                 startActivity(new Intent(getContext(),RegisterActivity.class));
             }
         });
+
+
         return binding.getRoot();
     }
 }
