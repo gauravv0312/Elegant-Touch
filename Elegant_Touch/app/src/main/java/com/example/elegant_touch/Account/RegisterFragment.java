@@ -9,7 +9,9 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.example.elegant_touch.Dashboard.DashboardActivity;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.FragmentRegisterBinding;
 
@@ -41,41 +43,53 @@ FragmentRegisterBinding binding;
                 if (TextUtils.isEmpty(name))
                 {
                     binding.fullname.setError("Name is required");
+                    return;
                 }
                 if (TextUtils.isEmpty(Email))
                 {
                     binding.email.setError("Name is required");
+                    return;
                 }
                 if (TextUtils.isEmpty(Phone))
                 {
                     binding.number.setError("Name is required");
+                    return;
                 }
 //                if (TextUtils.isEmpty(Password))
 //                {
 //                    binding.password.setError("Name is required");
 //                }
 
-                userregister(Email,Password,Phone);
+                userregister(name,Email,Password,Phone);
             }
         });
         return binding.getRoot();
 
     }
 
-    public void userregister(String email, String password, String phone) {
+    public void userregister(String name,String email, String password, String phone) {
         Call<signup_response_mode> call=apicontroller.getInstance()
                                         .getapi()
-                                        .getregister(name,email,mobile);
+                                        .getregister(name,email,password,phone);
 
         call.enqueue(new Callback<signup_response_mode>() {
             @Override
             public void onResponse(Call<signup_response_mode> call, Response<signup_response_mode> response) {
-                
+                signup_response_mode obj= response.body();
+                String result = obj.getMessage().trim();
+                if (result.equals("inserted"))
+                {
+                    startActivity(new Intent(getContext(), DashboardActivity.class));
+                }
+                if (result.equals("exist"))
+                {
+                    Toast.makeText(getContext(), "Email is already registered", Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override
             public void onFailure(Call<signup_response_mode> call, Throwable t) {
-
+                Toast.makeText(getContext(), "Error! try after some time ", Toast.LENGTH_SHORT).show();
             }
         });
     }
