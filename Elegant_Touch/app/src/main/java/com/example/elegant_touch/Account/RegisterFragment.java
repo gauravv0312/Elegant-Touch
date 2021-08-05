@@ -40,37 +40,35 @@ FragmentRegisterBinding binding;
                 String Email= binding.email.getText().toString().trim();
                 String Phone = binding.number.getText().toString().trim();
                 String Password = binding.password.getText().toString().trim();
-                if (TextUtils.isEmpty(name))
-                {
-                    binding.fullname.setError("Name is required");
-                    return;
-                }
-                if (TextUtils.isEmpty(Email))
-                {
-                    binding.email.setError("Name is required");
-                    return;
-                }
-                if (TextUtils.isEmpty(Phone))
-                {
-                    binding.number.setError("Name is required");
-                    return;
-                }
-//                if (TextUtils.isEmpty(Password))
+//                if (TextUtils.isEmpty(name))
 //                {
-//                    binding.password.setError("Name is required");
+//                    binding.fullname.setError("Name is required");
+////                    return;
+//                }
+//                else if (TextUtils.isEmpty(Email))
+//                {
+//                    binding.email.setError("Name is required");
+////                    return;
+//                }
+//                else if (TextUtils.isEmpty(Phone))
+//                {
+//                    binding.number.setError("Name is required");
+////                    return;
+//                }
+//                else {
+                    userregister(name,Email,Password,Phone);
 //                }
 
-                userregister(name,Email,Password,Phone);
             }
         });
         return binding.getRoot();
 
     }
 
-    public void userregister(String name,String email, String password, String phone) {
+    public void userregister(String name,String email, String password, String mobile) {
         Call<signup_response_mode> call=apicontroller.getInstance()
                                         .getapi()
-                                        .getregister(name,email,password,phone);
+                                        .getregister(name,email,mobile,password);
 
         call.enqueue(new Callback<signup_response_mode>() {
             @Override
@@ -83,13 +81,13 @@ FragmentRegisterBinding binding;
                 }
                 if (result.equals("exist"))
                 {
-                    Toast.makeText(getContext(), "Email is already registered", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(),"Email is already registered", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<signup_response_mode> call, Throwable t) {
-                Toast.makeText(getContext(), "Error! try after some time ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
