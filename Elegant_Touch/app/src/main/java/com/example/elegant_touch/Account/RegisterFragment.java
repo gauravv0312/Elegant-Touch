@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.elegant_touch.Dashboard.DashboardActivity;
+import com.example.elegant_touch.LoaderActivity;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.FragmentRegisterBinding;
 
@@ -78,7 +79,7 @@ FragmentRegisterBinding binding;
                 String result = obj.getMessage().trim();
                 if (result.equals("inserted"))
                 {
-                    startActivity(new Intent(getContext(), DashboardActivity.class));
+                    startActivity(new Intent(getContext(), LoaderActivity.class));
                 }
                 if (result.equals("exist"))
                 {
