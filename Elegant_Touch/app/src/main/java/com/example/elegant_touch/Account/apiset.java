@@ -8,7 +8,7 @@ import retrofit2.http.POST;
 public interface apiset {
 
     @FormUrlEncoded
-    @POST("signup.php")
+    @POST("register.php")
     Call<signup_response_mode> getregister(
       @Field("name") String name,
       @Field("email") String email,
