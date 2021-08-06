@@ -40,6 +40,7 @@ FragmentRegisterBinding binding;
                 String Email= binding.email.getText().toString().trim();
                 String Phone = binding.number.getText().toString().trim();
                 String Password = binding.password.getText().toString().trim();
+                String address = binding.address.getText().toString().trim();
 //                if (TextUtils.isEmpty(name))
 //                {
 //                    binding.fullname.setError("Name is required");
@@ -56,7 +57,7 @@ FragmentRegisterBinding binding;
 ////                    return;
 //                }
 //                else {
-                    userregister(name,Email,Password,Phone);
+                    userregister(name,Email,Password,Phone,address);
 //                }
 
             }
@@ -65,10 +66,10 @@ FragmentRegisterBinding binding;
 
     }
 
-    public void userregister(String name,String email, String password, String mobile) {
+    public void userregister(String name,String email, String password, String mobile,String address) {
         Call<signup_response_mode> call=apicontroller.getInstance()
                                         .getapi()
-                                        .getregister(name,email,mobile,password);
+                                        .getregister(name,email,mobile,password,address);
 
         call.enqueue(new Callback<signup_response_mode>() {
             @Override
