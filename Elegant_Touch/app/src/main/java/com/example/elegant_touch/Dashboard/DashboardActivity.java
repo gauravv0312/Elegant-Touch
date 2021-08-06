@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.WindowManager;
 
-import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.ActivityDashboardBinding;
 
 public class DashboardActivity extends AppCompatActivity {

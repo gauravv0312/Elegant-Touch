@@ -5,15 +5,12 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.elegant_touch.Dashboard.DashboardActivity;
 import com.example.elegant_touch.LoaderActivity;
-import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.FragmentRegisterBinding;
 
 import retrofit2.Call;
