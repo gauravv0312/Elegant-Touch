@@ -13,7 +13,8 @@ public interface apiset {
       @Field("name") String name,
       @Field("email") String email,
       @Field("mobile") String mobile,
-      @Field("password") String password
+      @Field("password") String password,
+      @Field("address") String address
     );
 
 }
