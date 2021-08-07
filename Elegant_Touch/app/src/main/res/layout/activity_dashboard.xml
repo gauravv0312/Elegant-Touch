@@ -8,10 +8,10 @@
     tools:context=".Dashboard.DashboardActivity">
 
     <FrameLayout
+        android:id="@+id/framelayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/framelayout"
-        android:layout_above="@+id/bottomnavigation"/>
+        android:layout_above="@+id/bottomnavigation" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomnavigation"
