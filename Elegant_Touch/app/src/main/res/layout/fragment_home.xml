@@ -37,5 +37,18 @@
             android:layout_centerVertical="true"/>
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp">
 
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/image_slider"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            app:iss_auto_cycle="true"
+            app:iss_delay="0"
+            app:iss_period="1000"
+            app:iss_corner_radius="5"/>
+
+</RelativeLayout>
 </LinearLayout>
