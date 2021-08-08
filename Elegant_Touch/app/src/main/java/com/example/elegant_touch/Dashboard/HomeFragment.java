@@ -28,7 +28,6 @@ public class HomeFragment extends Fragment {
         slideModels.add(new SlideModel(R.drawable.slider2, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.slider3, ScaleTypes.FIT));
         binding.imageSlider.setImageList(slideModels);
-
         return binding.getRoot();
 
     }
