@@ -33,7 +33,7 @@ public class DashboardActivity extends AppCompatActivity {
                    break;
                    case R.id.order: temp =new OrderFragment();
                    break;
-                   case R.id.profile: temp =new ProfileFragment();
+                   case R.id.profile: temp =new SettingFragment();
                    break;
 
                }

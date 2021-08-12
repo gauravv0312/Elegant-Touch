@@ -9,14 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.elegant_touch.R;
-import com.example.elegant_touch.databinding.FragmentProfileBinding;
+import com.example.elegant_touch.databinding.FragmentSettingBinding;
 
-public class ProfileFragment extends Fragment {
-    FragmentProfileBinding binding;
+public class SettingFragment extends Fragment {
+    FragmentSettingBinding binding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentProfileBinding.inflate(inflater,container,false);
+        binding =FragmentSettingBinding.inflate(inflater,container,false);
         return binding.getRoot();
     }
 }
