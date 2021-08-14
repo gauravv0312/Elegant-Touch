@@ -102,9 +102,7 @@
                                 android:layout_height="60dp"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="15dp"
-                                android:src="@drawable/salon"
-                                app:civ_border_color="#FF000000"
-                                app:civ_border_width="2dp" />
+                                android:src="@drawable/salon" />
 
                             <TextView
                                 android:id="@+id/textView14"
@@ -175,9 +173,7 @@
                                 android:layout_height="60dp"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="15dp"
-                                android:src="@drawable/men"
-                                app:civ_border_color="#FF000000"
-                                app:civ_border_width="2dp" />
+                                android:src="@drawable/men"/>
 
                             <TextView
                                 android:id="@+id/textView16"
@@ -218,9 +214,7 @@
                                 android:layout_height="60dp"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="15dp"
-                                android:src="@drawable/women"
-                                app:civ_border_color="#FF000000"
-                                app:civ_border_width="2dp" />
+                                android:src="@drawable/women" />
 
                             <TextView
                                 android:id="@+id/textone"
@@ -255,9 +249,7 @@
                                 android:layout_height="60dp"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="15dp"
-                                android:src="@drawable/boy"
-                                app:civ_border_color="#FF000000"
-                                app:civ_border_width="2dp" />
+                                android:src="@drawable/boy" />
 
                             <TextView
                                 android:id="@+id/texttwo"
@@ -291,9 +283,7 @@
                                 android:layout_height="60dp"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="15dp"
-                                android:src="@drawable/girl"
-                                app:civ_border_color="#FF000000"
-                                app:civ_border_width="2dp" />
+                                android:src="@drawable/girl" />
 
                             <TextView
                                 android:id="@+id/textthree"
