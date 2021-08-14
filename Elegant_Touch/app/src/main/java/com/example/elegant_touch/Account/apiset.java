@@ -17,4 +17,11 @@ public interface apiset {
       @Field("address") String address
     );
 
+    @FormUrlEncoded
+    @POST("login.php")
+    Call<login_response_model> getlogin(
+            @Field("email") String email,
+            @Field("password") String password
+    );
+
 }
