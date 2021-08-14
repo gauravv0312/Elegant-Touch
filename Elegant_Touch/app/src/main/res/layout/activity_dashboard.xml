@@ -214,7 +214,7 @@
                                 android:layout_height="60dp"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="15dp"
-                                android:src="@drawable/women" />
+                                android:src="@drawable/woman" />
 
                             <TextView
                                 android:id="@+id/textone"
