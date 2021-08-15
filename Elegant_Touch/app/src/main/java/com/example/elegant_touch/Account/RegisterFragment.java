@@ -28,6 +28,7 @@ FragmentRegisterBinding binding;
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(),LoginActivity.class));
+                getActivity().finish();
             }
         });
 
@@ -77,6 +78,7 @@ FragmentRegisterBinding binding;
                 if (result.equals("inserted"))
                 {
                     startActivity(new Intent(getContext(), LoaderActivity.class));
+                    getActivity().finish();
                 }
                 if (result.equals("exist"))
                 {

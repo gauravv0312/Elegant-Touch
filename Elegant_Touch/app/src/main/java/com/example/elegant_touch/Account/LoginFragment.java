@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.elegant_touch.Dashboard.DashboardActivity;
 import com.example.elegant_touch.LoaderActivity;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.FragmentLoginBinding;
@@ -31,9 +32,10 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(),RegisterActivity.class));
+                getActivity().finish();
             }
         });
-
+        verifyuserexistance();
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +60,13 @@ public class LoginFragment extends Fragment {
                 if (result.equals("exist"))
                 {
                     SharedPreferences sharedPreferences = getActivity().getSharedPreferences("credentials",MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("username",email);
+                    editor.putString("password",password);
+                    editor.commit();
+                    editor.apply();
+                    startActivity(new Intent(getContext(), DashboardActivity.class));
+                    getActivity().finish();
                 }
                 if (result.equals("not exist"))
                 {
@@ -70,5 +79,15 @@ public class LoginFragment extends Fragment {
 
             }
         });
+    }
+
+    public void verifyuserexistance()
+    {
+        SharedPreferences sharedPreferences =getContext().getSharedPreferences("credentials",MODE_PRIVATE);
+        if (sharedPreferences.contains("username"))
+        {
+            startActivity(new Intent(getContext(),DashboardActivity.class));
+            getActivity().finish();
+        }
     }
 }

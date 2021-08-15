@@ -18,6 +18,7 @@ public class LoaderActivity extends AppCompatActivity {
             @Override
             public void run() {
                 startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
+                finish();
             }
         },3000);
     }
