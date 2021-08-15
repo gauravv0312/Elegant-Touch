@@ -53,19 +53,19 @@ public class SplashscreenActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
     }
 
-    @Override
-    protected void onStart() {
-        SharedPreferences sharedPreferences =getSharedPreferences("credentials",MODE_PRIVATE);
-        if (sharedPreferences.contains("username"))
-        {
-            startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
-            finish();
-        }
-        else {
-            super.onStart();
-            startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
-        }
-
-
-    }
+//    @Override
+//    protected void onStart() {
+//        SharedPreferences sharedPreferences =getSharedPreferences("credentials",MODE_PRIVATE);
+//        if (sharedPreferences.contains("username"))
+//        {
+//            startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
+//            finish();
+//        }
+//        else {
+//            super.onStart();
+//            startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
+//        }
+//
+//
+//    }
 }

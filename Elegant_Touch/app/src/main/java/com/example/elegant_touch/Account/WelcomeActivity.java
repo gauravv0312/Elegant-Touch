@@ -3,10 +3,12 @@ package com.example.elegant_touch.Account;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
+import com.example.elegant_touch.Dashboard.DashboardActivity;
 import com.example.elegant_touch.LoaderActivity;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.ActivityWelcomeBinding;
@@ -39,5 +41,17 @@ public class WelcomeActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finishAffinity();
+    }
+
+    @Override
+    protected void onStart() {
+        SharedPreferences sharedPreferences =getSharedPreferences("credentials",MODE_PRIVATE);
+        if (sharedPreferences.contains("username"))
+        {
+            startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
+            finish();
+            super.onStart();
+        }
+
     }
 }
