@@ -22,4 +22,5 @@ public class LoaderActivity extends AppCompatActivity {
             }
         },3000);
     }
+
 }

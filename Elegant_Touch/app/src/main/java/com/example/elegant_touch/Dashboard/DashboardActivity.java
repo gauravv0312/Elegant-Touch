@@ -70,7 +70,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         }
         else {
             super.onBackPressed();
-//        finishAffinity();
+            finishAffinity();
         }
     }
 

@@ -78,7 +78,7 @@ public class LoginFragment extends Fragment {
 
             @Override
             public void onFailure(Call<login_response_model> call, Throwable t) {
-
+                Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

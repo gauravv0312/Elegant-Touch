@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
+import com.example.elegant_touch.LoaderActivity;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.ActivityWelcomeBinding;
 
