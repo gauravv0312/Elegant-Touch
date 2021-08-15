@@ -65,7 +65,7 @@ public class LoginFragment extends Fragment {
                     editor.putString("password",password);
                     editor.commit();
                     editor.apply();
-                    startActivity(new Intent(getContext(), DashboardActivity.class));
+                    startActivity(new Intent(getContext(), LoaderActivity.class));
                     getActivity().finish();
                 }
                 if (result.equals("not exist"))

@@ -17,7 +17,7 @@ public class LoaderActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
+                startActivity(new Intent(getApplicationContext(),DashboardActivity.class));
                 finish();
             }
         },3000);
