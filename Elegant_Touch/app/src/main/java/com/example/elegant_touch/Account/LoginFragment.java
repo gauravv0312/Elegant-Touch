@@ -70,6 +70,8 @@ public class LoginFragment extends Fragment {
                 }
                 if (result.equals("not exist"))
                 {
+                    binding.loginEmail.setText("");
+                    binding.loginPassword.setText("");
                     Toast.makeText(getContext(),"Check your password", Toast.LENGTH_SHORT).show();
                 }
             }

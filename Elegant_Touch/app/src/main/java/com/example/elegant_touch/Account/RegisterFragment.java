@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,24 +41,24 @@ FragmentRegisterBinding binding;
                 String Phone = binding.number.getText().toString().trim();
                 String Password = binding.password.getText().toString().trim();
                 String address = binding.address.getText().toString().trim();
-//                if (TextUtils.isEmpty(name))
-//                {
-//                    binding.fullname.setError("Name is required");
-////                    return;
-//                }
-//                else if (TextUtils.isEmpty(Email))
-//                {
-//                    binding.email.setError("Name is required");
-////                    return;
-//                }
-//                else if (TextUtils.isEmpty(Phone))
-//                {
-//                    binding.number.setError("Name is required");
-////                    return;
-//                }
-//                else {
+                if (TextUtils.isEmpty(name))
+                {
+                    binding.fullname.setError("Name is required");
+//                    return;
+                }
+                else if (TextUtils.isEmpty(Email))
+                {
+                    binding.email.setError("Name is required");
+//                    return;
+                }
+                else if (TextUtils.isEmpty(Phone))
+                {
+                    binding.number.setError("Name is required");
+//                    return;
+                }
+                else {
                     userregister(name,Email,Password,Phone,address);
-//                }
+                }
 
             }
         });
@@ -82,6 +83,11 @@ FragmentRegisterBinding binding;
                 }
                 if (result.equals("exist"))
                 {
+                    binding.fullname.setText("");
+                    binding.email.setText("");
+                    binding.number.setText("");
+                    binding.password.setText("");
+                    binding.address.setText("");
                     Toast.makeText(getContext(),"Email is already registered", Toast.LENGTH_SHORT).show();
                 }
             }
