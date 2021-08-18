@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
@@ -34,7 +35,12 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         slideModels.add(new SlideModel(R.drawable.slider3, ScaleTypes.FIT));
         binding.imageSlider.setImageList(slideModels);
         setContentView(binding.getRoot());
-        //        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,new HomeFragment()).commit();
+        binding.saloon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Saloon Section", Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
 
