@@ -3,7 +3,6 @@ package com.example.elegant_touch.Dashboard;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
-import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,14 +10,12 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.elegant_touch.Account.WelcomeActivity;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.ActivityDashboardBinding;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -86,6 +83,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         {
             case R.id.logout:
                 logout_account();
+                break;
+            case R.id.category:
+                startActivity(new Intent(getApplicationContext(),CategoryActivity.class));
                 break;
             default:
         }

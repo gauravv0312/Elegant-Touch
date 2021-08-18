@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Elegant_Touch"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Dashboard.CategoryActivity"
+            android:exported="true" />
+        <activity
             android:name=".LoaderActivity"
             android:exported="true" />
         <activity android:name=".Account.RegisterActivity" />
@@ -25,7 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Dashboard.DashboardActivity"></activity>
+        <activity android:name=".Dashboard.DashboardActivity" />
         <activity android:name=".Onboarding_Screen.OnboardingScreenActivity" />
 
         <meta-data
