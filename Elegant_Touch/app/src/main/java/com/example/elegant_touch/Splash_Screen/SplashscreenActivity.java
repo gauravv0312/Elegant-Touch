@@ -50,4 +50,5 @@ public class SplashscreenActivity extends AppCompatActivity {
         }, 4000);
         setContentView(binding.getRoot());
     }
+
 }

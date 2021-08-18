@@ -43,23 +43,20 @@ public class WelcomeActivity extends AppCompatActivity {
         finishAffinity();
     }
 
-//    @Override
-//    protected void onStart() {
-//        SharedPreferences sharedPreferences =getSharedPreferences("credentials",MODE_PRIVATE);
-//        if (sharedPreferences.contains("username"))
-//        {
-//            startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
-//            finish();
-//            super.onStart();
-//        }
-//         if (sharedPreferences.contains(null))
-//        {
-//            SharedPreferences.Editor editor =sharedPreferences.edit();
-//            editor.remove(null);
-//            editor.putString("","");
-//            editor.commit();
-//            editor.apply();
-//            startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
-//        }
-//    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        SharedPreferences sharedPreferences = getSharedPreferences("credentials", MODE_PRIVATE);
+        if (sharedPreferences.contains("username")) {
+            startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
+            finish();
+
+        }
+        else if (sharedPreferences.contains(null))
+        {
+            startActivity(getIntent());
+            finish();
+        }
+    }
+
 }
