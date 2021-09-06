@@ -108,6 +108,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             editor.putString("msg","Logout Successfully");
             editor.commit();
             startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
+            finish();
         }
     }
 }

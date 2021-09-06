@@ -45,12 +45,14 @@
             android:textStyle="bold"/>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardParlour"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="3dp"
             app:cardMaxElevation="3dp">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -90,36 +92,38 @@
 
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardSaloon"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="3dp"
             app:cardMaxElevation="3dp">
-               <RelativeLayout
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                   android:background="@color/card2">
+                android:background="@color/card2">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/baloo"
+                    android:padding="25dp"
                     android:text="Saloon"
-                    android:textSize="30dp"
                     android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:padding="25dp"/>
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EXPAND ALL"
+                    android:layout_alignParentBottom="true"
                     android:background="#00000000"
                     android:fontFamily="@font/baloo"
-                    android:textStyle="bold"
                     android:padding="20dp"
-                    android:layout_alignParentBottom="true"/>
+                    android:text="EXPAND ALL"
+                    android:textStyle="bold" />
 
                 <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/saloon"
@@ -133,12 +137,14 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardMen"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="3dp"
             app:cardMaxElevation="3dp">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -157,12 +163,12 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EXPAND ALL"
+                    android:layout_alignParentBottom="true"
                     android:background="#00000000"
                     android:fontFamily="@font/baloo"
-                    android:textStyle="bold"
                     android:padding="20dp"
-                    android:layout_alignParentBottom="true"/>
+                    android:text="EXPAND ALL"
+                    android:textStyle="bold" />
 
                 <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/men"
@@ -176,12 +182,14 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardWomen"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="3dp"
             app:cardMaxElevation="3dp">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -200,12 +208,12 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EXPAND ALL"
+                    android:layout_alignParentBottom="true"
                     android:background="#00000000"
                     android:fontFamily="@font/baloo"
-                    android:textStyle="bold"
                     android:padding="20dp"
-                    android:layout_alignParentBottom="true"/>
+                    android:text="EXPAND ALL"
+                    android:textStyle="bold" />
 
                 <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/women"
@@ -219,12 +227,14 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardBoy"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="3dp"
             app:cardMaxElevation="3dp">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -263,12 +273,14 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardGirl"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="3dp"
             app:cardMaxElevation="3dp">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -278,21 +290,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/baloo"
+                    android:padding="25dp"
                     android:text="Girl"
-                    android:textSize="30dp"
                     android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:padding="25dp"/>
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EXPAND ALL"
+                    android:layout_alignParentBottom="true"
                     android:background="#00000000"
                     android:fontFamily="@font/baloo"
-                    android:textStyle="bold"
                     android:padding="20dp"
-                    android:layout_alignParentBottom="true"/>
+                    android:text="EXPAND ALL"
+                    android:textStyle="bold" />
 
                 <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/girl"
@@ -306,12 +318,14 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardPerfume"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="3dp"
             app:cardMaxElevation="3dp">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -321,21 +335,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/baloo"
+                    android:padding="25dp"
                     android:text="Perfume"
-                    android:textSize="30dp"
                     android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:padding="25dp"/>
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EXPAND ALL"
+                    android:layout_alignParentBottom="true"
                     android:background="#00000000"
                     android:fontFamily="@font/baloo"
-                    android:textStyle="bold"
                     android:padding="20dp"
-                    android:layout_alignParentBottom="true"/>
+                    android:text="EXPAND ALL"
+                    android:textStyle="bold" />
 
                 <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/perfume"
@@ -349,12 +363,14 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardHair"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="3dp"
             app:cardMaxElevation="3dp">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -364,21 +380,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/baloo"
-                    android:text="Saloon"
-                    android:textSize="30dp"
+                    android:padding="25dp"
+                    android:text="Hair Serum"
                     android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:padding="25dp"/>
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EXPAND ALL"
+                    android:layout_alignParentBottom="true"
                     android:background="#00000000"
                     android:fontFamily="@font/baloo"
-                    android:textStyle="bold"
                     android:padding="20dp"
-                    android:layout_alignParentBottom="true"/>
+                    android:text="EXPAND ALL"
+                    android:textStyle="bold" />
 
                 <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/oil"
@@ -392,12 +408,14 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardSoap"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="3dp"
             app:cardMaxElevation="3dp">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -408,7 +426,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/baloo"
                     android:padding="25dp"
-                    android:text="Saloon"
+                    android:text="Soap"
                     android:textColor="@color/black"
                     android:textSize="30dp"
                     android:textStyle="bold" />
@@ -416,13 +434,13 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EXPAND ALL"
+                    android:layout_alignParentBottom="true"
                     android:background="#00000000"
                     android:fontFamily="@font/baloo"
-                    android:textStyle="bold"
                     android:padding="20dp"
+                    android:text="EXPAND ALL"
                     android:textColor="@color/black"
-                    android:layout_alignParentBottom="true"/>
+                    android:textStyle="bold" />
 
                 <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/soap"
@@ -436,12 +454,14 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardShampoo"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="3dp"
             app:cardMaxElevation="3dp">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -451,21 +471,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/baloo"
+                    android:padding="25dp"
                     android:text="Shampoo"
-                    android:textSize="30dp"
                     android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:padding="25dp"/>
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EXPAND ALL"
+                    android:layout_alignParentBottom="true"
                     android:background="#00000000"
                     android:fontFamily="@font/baloo"
-                    android:textStyle="bold"
                     android:padding="20dp"
-                    android:layout_alignParentBottom="true"/>
+                    android:text="EXPAND ALL"
+                    android:textStyle="bold" />
 
                 <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/shampoo"
@@ -479,12 +499,14 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardMakeup"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="3dp"
             app:cardMaxElevation="3dp">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -494,21 +516,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/baloo"
+                    android:padding="25dp"
                     android:text="Makeup"
-                    android:textSize="30dp"
                     android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:padding="25dp"/>
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EXPAND ALL"
+                    android:layout_alignParentBottom="true"
                     android:background="#00000000"
                     android:fontFamily="@font/baloo"
-                    android:textStyle="bold"
                     android:padding="20dp"
-                    android:layout_alignParentBottom="true"/>
+                    android:text="EXPAND ALL"
+                    android:textStyle="bold" />
 
                 <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/makeup"
