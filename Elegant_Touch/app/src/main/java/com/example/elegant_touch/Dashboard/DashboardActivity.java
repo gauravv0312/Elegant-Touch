@@ -57,19 +57,19 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         binding.drawerIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (binding.drawerLayout.isDrawerVisible(GravityCompat.START))
-                {
+                if (binding.drawerLayout.isDrawerVisible(GravityCompat.START)) {
                     binding.drawerLayout.closeDrawer(GravityCompat.START);
-                }
-                else
-                {
+                } else {
                     binding.drawerLayout.openDrawer(GravityCompat.START);
+                    SharedPreferences sharedPreferences= getSharedPreferences("credentials", MODE_PRIVATE);
+                    if (sharedPreferences.contains("username")) {
+                        View hide = findViewById(R.id.menu_login);
+                        hide.setVisibility(View.GONE);
+                    }
                 }
             }
         });
     }
-
-
 
     @Override
     public void onBackPressed() {
@@ -87,7 +87,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId())
         {
-            case R.id.logout:
+            case R.id.menu_logout:
                 logout_account();
                 break;
             case R.id.category:

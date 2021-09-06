@@ -12,7 +12,7 @@
         android:icon="@drawable/ic_baseline_reorder_24"
         android:title="Order"/>
 
-    <item android:id="@+id/profile"
+    <item android:id="@+id/menu_profile"
         android:icon="@drawable/ic_baseline_settings_24"
         android:title="Setting"/>
 
