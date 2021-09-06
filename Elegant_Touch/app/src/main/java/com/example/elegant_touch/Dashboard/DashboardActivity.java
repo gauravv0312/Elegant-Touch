@@ -61,11 +61,6 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                     binding.drawerLayout.closeDrawer(GravityCompat.START);
                 } else {
                     binding.drawerLayout.openDrawer(GravityCompat.START);
-                    SharedPreferences sharedPreferences= getSharedPreferences("credentials", MODE_PRIVATE);
-                    if (sharedPreferences.contains("username")) {
-                        View hide = findViewById(R.id.menu_login);
-                        hide.setVisibility(View.GONE);
-                    }
                 }
             }
         });
