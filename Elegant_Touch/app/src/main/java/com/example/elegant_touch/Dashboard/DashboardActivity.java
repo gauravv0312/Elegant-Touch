@@ -85,7 +85,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             case R.id.menu_logout:
                 logout_account();
                 break;
-            case R.id.category:
+            case R.id.menu_category:
                 startActivity(new Intent(getApplicationContext(),CategoryActivity.class));
                 break;
             default:
