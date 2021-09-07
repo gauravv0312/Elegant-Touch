@@ -2,6 +2,7 @@ package com.example.elegant_touch.Dashboard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.elegant_touch.R;
@@ -15,5 +16,12 @@ public class CategoryActivity extends AppCompatActivity {
         binding =ActivityCategoryBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         getSupportFragmentManager().beginTransaction().replace(R.id.categoryactvity,new AllCategoriesFragment()).commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(getApplicationContext(),DashboardActivity.class));
+        finish();
     }
 }

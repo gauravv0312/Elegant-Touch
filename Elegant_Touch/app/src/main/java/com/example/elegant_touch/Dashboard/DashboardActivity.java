@@ -87,7 +87,11 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 break;
             case R.id.menu_category:
                 startActivity(new Intent(getApplicationContext(),CategoryActivity.class));
+                finish();
                 break;
+            case R.id.menu_profile:
+                startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+                finish();
             default:
         }
 
