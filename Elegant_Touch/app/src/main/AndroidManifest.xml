@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.elegant_touch">
+    package="com.example.elegant_touch" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Elegant_Touch"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name=".Dashboard.ProfileActivity"
+            android:exported="true" />
         <activity
             android:name=".Dashboard.CategoryActivity"
             android:exported="true" />
@@ -21,14 +24,15 @@
         <activity android:name=".Account.RegisterActivity" />
         <activity android:name=".Account.LoginActivity" />
         <activity android:name=".Account.WelcomeActivity" />
-        <activity android:name=".Splash_Screen.SplashscreenActivity">
-        </activity>
-        <activity android:name=".Dashboard.DashboardActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".Splash_Screen.SplashscreenActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Dashboard.DashboardActivity" >
+
         </activity>
         <activity android:name=".Onboarding_Screen.OnboardingScreenActivity" />
 

@@ -19,7 +19,7 @@
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/acme"
+        android:fontFamily="@font/baloo_bhai"
         android:text="Welcome,"
         android:textColor="@color/black"
         android:textSize="48dp"
@@ -31,8 +31,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:fontFamily="@font/acme"
-        android:text="SignUp to start your new journey"
+        android:fontFamily="@font/baloo_bhai"
+        android:text="Register to start your new journey"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -111,7 +111,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/btn"
             android:backgroundTint="@color/black"
-            android:text="Signup"
+            android:text="Register"
             app:backgroundTint="@color/black" />
 
         <TextView
@@ -119,7 +119,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/acme"
+            android:fontFamily="@font/baloo_bhai"
             android:gravity="center"
             android:text="Already have an account?"
             android:textColor="@color/black"
