@@ -29,12 +29,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/edit_image"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
+                android:onClick="changePhoto"
                 android:src="@drawable/pp"
                 app:civ_border_color="#FF000000"
                 app:civ_border_width="2dp" />
@@ -46,6 +47,7 @@
                 android:layout_below="@id/edit_image"
                 android:layout_centerHorizontal="true"
                 android:fontFamily="@font/baloo_bhai"
+                android:onClick="changePhoto"
                 android:text="Edit Photo"
                 android:textColor="@color/black"
                 android:textSize="16sp" />

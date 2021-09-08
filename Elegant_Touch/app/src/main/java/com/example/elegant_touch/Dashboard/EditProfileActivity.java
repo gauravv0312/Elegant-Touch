@@ -1,9 +1,13 @@
 package com.example.elegant_touch.Dashboard;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 
 import com.example.elegant_touch.R;
@@ -25,9 +29,25 @@ public class EditProfileActivity extends AppCompatActivity {
         });
     }
 
+    public void changePhoto(View view){
+        Intent opengalleryintent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(opengalleryintent,1000);
+    }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
         startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode==1000){
+            if (resultCode== Activity.RESULT_OK){
+                Uri imageUri = data.getData();
+                binding.editImage.setImageURI(imageUri);
+            }
+        }
     }
 }
