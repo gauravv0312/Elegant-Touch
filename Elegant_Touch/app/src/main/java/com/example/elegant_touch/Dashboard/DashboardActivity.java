@@ -7,6 +7,7 @@ import androidx.core.view.GravityCompat;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.elegant_touch.Account.LoginActivity;
 import com.example.elegant_touch.Account.WelcomeActivity;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.ActivityDashboardBinding;
@@ -46,8 +48,8 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
 //        drawer
         navigationDrawer();
-
-
+//      hide login id
+        hideItem();
     }
 
     private void navigationDrawer() {
@@ -92,6 +94,11 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             case R.id.menu_profile:
                 startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
                 finish();
+                break;
+            case R.id.menu_login:
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                finish();
+                break;
             default:
         }
 
@@ -110,4 +117,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             finish();
         }
     }
+
+    private void hideItem() {
+        SharedPreferences sharedPreferences = getSharedPreferences("credentials", MODE_PRIVATE);
+        if (sharedPreferences.contains("username")) {
+            Menu nav_Menu = binding.navigationView.getMenu();
+            nav_Menu.findItem(R.id.menu_login).setVisible(false);
+        }
+    }
+
 }
