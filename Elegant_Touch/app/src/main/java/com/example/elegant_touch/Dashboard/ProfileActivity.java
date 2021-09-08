@@ -16,10 +16,10 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
        binding = ActivityProfileBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        binding.backbutton.setOnClickListener(new View.OnClickListener() {
+        binding.editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),DashboardActivity.class));
+                startActivity(new Intent(getApplicationContext(),EditProfileActivity.class));
                 finish();
             }
         });

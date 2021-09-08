@@ -48,7 +48,7 @@
             android:fontFamily="@font/baloo_bhai"
             android:text="Gaurav Verma"
             android:textColor="@color/black"
-            android:textSize="24sp" />
+            android:textSize="28dp" />
 
         <TextView
             android:id="@+id/profile_email"
@@ -59,83 +59,37 @@
             android:fontFamily="@font/baloo_bhai"
             android:text="gauravv0312@gmail.com"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/profile_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_email"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="9996629014"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/profile_email"
-            android:layout_marginTop="-30dp"
+
             app:srcCompat="@drawable/design" />
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dp">
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_baseline_person_24"
-                android:drawablePadding="10dp"
-                android:hint="Fullname" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_baseline_email_24"
-                android:drawablePadding="10dp"
-                android:hint="Email Address" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_baseline_phone_android_24"
-                android:drawablePadding="10dp"
-                android:hint="Mobile Number" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_baseline_home_24"
-                android:drawablePadding="10dp"
-                android:hint="Address" />
-        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/update_btn"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/btn"
-            android:text="Update" />
+            android:id="@+id/edit_profile"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/imageView3"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="75dp"
+            android:text="Edit" />
 
-    </LinearLayout>
+
+    </RelativeLayout>
 </LinearLayout>
 </ScrollView>
