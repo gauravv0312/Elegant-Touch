@@ -3,10 +3,13 @@ package com.example.elegant_touch.product;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Adapter;
 
 import com.example.elegant_touch.Adapter.saloonAdapter;
+import com.example.elegant_touch.Dashboard.DashboardActivity;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.ActivitySaloonBinding;
 import com.example.elegant_touch.modelclass.SaloonModelClass;
@@ -62,5 +65,16 @@ public class SaloonActivity extends AppCompatActivity {
         obj6.setImage(R.drawable.download);
         holder.add(obj6);
         return holder;
+    }
+    public void backButton(View view){
+        startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
+        finish();
     }
 }

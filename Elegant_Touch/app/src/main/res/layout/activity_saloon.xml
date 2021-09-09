@@ -1,10 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/recyclerview"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".product.SaloonActivity">
+    tools:context=".product.SaloonActivity"
+    android:orientation="vertical">
 
-</androidx.recyclerview.widget.RecyclerView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="backButton"
+            android:padding="15dp"
+            android:src="@drawable/ic_baseline_keyboard_backspace_24" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saloon"
+            android:layout_toRightOf="@+id/backbutton"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="100dp"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/baloo_bhai"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerview"/>
+
+</LinearLayout>
