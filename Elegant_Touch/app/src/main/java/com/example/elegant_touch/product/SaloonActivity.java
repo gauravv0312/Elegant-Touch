@@ -1,6 +1,7 @@
 package com.example.elegant_touch.product;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
@@ -23,7 +24,14 @@ public class SaloonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySaloonBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        binding.recyclerview.setLayoutManager(new LinearLayoutManager(this));
+//        binding.recyclerview.setLayoutManager(new LinearLayoutManager(this));
+
+//        for horizontal recyclerview
+//         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+//         binding.recyclerview.setLayoutManager(linearLayoutManager);
+        GridLayoutManager gridLayoutManager =new GridLayoutManager(this,2);
+        binding.recyclerview.setLayoutManager(gridLayoutManager);
+
         binding.recyclerview.setAdapter(new saloonAdapter(saloonModelClassArrayList()));
     }
     public ArrayList<SaloonModelClass> saloonModelClassArrayList(){
