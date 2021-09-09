@@ -19,6 +19,7 @@ import com.example.elegant_touch.Account.LoginActivity;
 import com.example.elegant_touch.Account.WelcomeActivity;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.ActivityDashboardBinding;
+import com.example.elegant_touch.product.ParlourActivity;
 import com.example.elegant_touch.product.SaloonActivity;
 import com.google.android.material.navigation.NavigationView;
 
@@ -46,7 +47,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             }
         });
 
-
+       binding.parlour.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               startActivity(new Intent(getApplicationContext(), ParlourActivity.class));
+               finish();
+           }
+       });
 
 //        drawer
         navigationDrawer();

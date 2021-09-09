@@ -14,7 +14,7 @@ import com.example.elegant_touch.modelclass.SaloonModelClass;
 
 import java.util.ArrayList;
 
-public class saloonAdapter extends RecyclerView.Adapter<saloonAdapter.ViewHolder> {
+public class saloonAdapter extends RecyclerView.Adapter<saloonAdapter.saloonViewHolder> {
     ArrayList<SaloonModelClass> saloonModelClasses;
 
     public saloonAdapter(ArrayList<SaloonModelClass> saloonModelClasses) {
@@ -23,14 +23,14 @@ public class saloonAdapter extends RecyclerView.Adapter<saloonAdapter.ViewHolder
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public saloonViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.saloonproduct,parent,false);
-        return new ViewHolder(view);
+        return new saloonViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull saloonViewHolder holder, int position) {
          holder.image.setImageResource(saloonModelClasses.get(position).getImage());
          holder.productname.setText(saloonModelClasses.get(position).getName());
          holder.productprice.setText(saloonModelClasses.get(position).getPrice());
@@ -41,10 +41,10 @@ public class saloonAdapter extends RecyclerView.Adapter<saloonAdapter.ViewHolder
         return saloonModelClasses.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder{
+    class saloonViewHolder extends RecyclerView.ViewHolder{
         ImageView image;
         TextView productname,productprice;
-        public ViewHolder(@NonNull View itemView) {
+        public saloonViewHolder(@NonNull View itemView) {
             super(itemView);
             image =itemView.findViewById(R.id.saloon_product);
             productname= itemView.findViewById(R.id.saloon_product_name);
