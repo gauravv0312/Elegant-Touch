@@ -19,6 +19,7 @@ import com.example.elegant_touch.Account.LoginActivity;
 import com.example.elegant_touch.Account.WelcomeActivity;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.ActivityDashboardBinding;
+import com.example.elegant_touch.product.SaloonActivity;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -40,7 +41,8 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         binding.saloon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Saloon Section", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), SaloonActivity.class));
+                finish();
             }
         });
 

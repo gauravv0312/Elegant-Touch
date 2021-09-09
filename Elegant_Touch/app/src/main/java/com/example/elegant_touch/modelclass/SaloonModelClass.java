@@ -4,7 +4,7 @@ public class SaloonModelClass
 {
     private String name;
     private String price;
-    private int imagename;
+    private int image;
 
     public String getName() {
         return name;
@@ -22,11 +22,11 @@ public class SaloonModelClass
         this.price = price;
     }
 
-    public int getImagename() {
-        return imagename;
+    public int getImage() {
+        return image;
     }
 
-    public void setImagename(int imagename) {
-        this.imagename = imagename;
+    public void setImage(int imagename) {
+        this.image = imagename;
     }
 }
