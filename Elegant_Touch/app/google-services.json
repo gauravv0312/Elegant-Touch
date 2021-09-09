@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "834705349642",
+    "project_id": "elegant-touch-2623f",
+    "storage_bucket": "elegant-touch-2623f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834705349642:android:8a231ead924b64b04d13f3",
+        "android_client_info": {
+          "package_name": "com.example.elegant_touch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834705349642-vdgkc28aaugh5tsoqbf48hmup6jlnk6h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdFPDsV7-i_f9hewRiaGGspbrbX4Wa8qw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834705349642-vdgkc28aaugh5tsoqbf48hmup6jlnk6h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
