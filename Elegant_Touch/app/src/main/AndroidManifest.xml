@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Elegant_Touch"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".product.SaloonActivity"
+            android:exported="true" />
+        <activity
             android:name=".Dashboard.EditProfileActivity"
             android:exported="true" />
         <activity
@@ -34,8 +37,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Dashboard.DashboardActivity">
-        </activity>
+        <activity android:name=".Dashboard.DashboardActivity"></activity>
         <activity android:name=".Onboarding_Screen.OnboardingScreenActivity" />
 
         <meta-data
