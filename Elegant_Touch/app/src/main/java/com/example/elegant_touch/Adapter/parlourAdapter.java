@@ -36,7 +36,6 @@ public class parlourAdapter extends RecyclerView.Adapter<parlourAdapter.parlourV
         holder.productname.setText(parlourModelClasses.get(position).getName());
         holder.productprice.setText(parlourModelClasses.get(position).getPrice());
     }
-
     @Override
     public int getItemCount() {
         return parlourModelClasses.size();
