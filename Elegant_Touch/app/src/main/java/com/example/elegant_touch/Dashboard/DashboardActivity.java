@@ -65,7 +65,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             }
         });
 
-        binding.man.setOnClickListener(new View.OnClickListener() {
+        binding.women.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), WomenActivity.class));

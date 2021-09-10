@@ -40,7 +40,7 @@ public class womenAdapter extends RecyclerView.Adapter<womenAdapter.womenViewHol
 
     @Override
     public int getItemCount() {
-        return 0;
+        return womenModelClasses.size();
     }
 
     class womenViewHolder extends RecyclerView.ViewHolder{

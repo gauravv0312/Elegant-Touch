@@ -36,9 +36,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:fontFamily="@font/boogaloo"
                 android:layout_centerInParent="true"
+                android:fontFamily="@font/baloo_bhai"
                 android:text="Elegant Touch"
                 android:textColor="@color/black"
                 android:textSize="24sp"
@@ -209,7 +208,7 @@
                             android:layout_height="match_parent">
 
                             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:id="@+id/one"
+                                android:id="@+id/women"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:layout_centerHorizontal="true"
@@ -220,7 +219,7 @@
                                 android:id="@+id/textone"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@+id/one"
+                                android:layout_below="@+id/women"
                                 android:layout_centerHorizontal="true"
                                 android:text="Women"
                                 android:textColor="@color/black"
@@ -244,7 +243,7 @@
                             android:layout_height="match_parent">
 
                             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:id="@+id/two"
+                                android:id="@+id/boy"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:layout_centerHorizontal="true"
@@ -255,7 +254,7 @@
                                 android:id="@+id/texttwo"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@+id/two"
+                                android:layout_below="@+id/boy"
                                 android:layout_centerHorizontal="true"
                                 android:text="Boy"
                                 android:textColor="@color/black"
@@ -278,7 +277,7 @@
                             android:layout_height="match_parent">
 
                             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:id="@+id/three"
+                                android:id="@+id/girl"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:layout_centerHorizontal="true"
@@ -289,7 +288,7 @@
                                 android:id="@+id/textthree"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@+id/three"
+                                android:layout_below="@+id/girl"
                                 android:layout_centerHorizontal="true"
                                 android:text="Girl"
                                 android:textColor="@color/black"
