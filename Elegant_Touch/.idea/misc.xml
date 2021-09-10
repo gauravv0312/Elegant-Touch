@@ -28,12 +28,13 @@
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_edit_profile.xml" value="0.19655797101449277" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_loader.xml" value="0.17255434782608695" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_login.xml" value="0.21829710144927536" />
-        <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_men.xml" value="0.25416666666666665" />
+        <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_men.xml" value="0.22262773722627738" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_parlour.xml" value="0.25416666666666665" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_saloon.xml" value="0.18885869565217392" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_splashscreen.xml" value="0.23505434782608695" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_welcome.xml" value="0.25416666666666665" />
+        <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_women.xml" value="0.25416666666666665" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/drawer_header.xml" value="0.14447463768115942" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/fragment_all_categories.xml" value="0.20878623188405798" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/fragment_category.xml" value="0.17300724637681159" />
@@ -48,6 +49,7 @@
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/parlourproduct.xml" value="0.23505434782608695" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/saloonproduct.xml" value="0.2463768115942029" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/slider_item.xml" value="0.1" />
+        <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/womenproduct.xml" value="0.17074275362318841" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/menu/drawer_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/menu/navigation_menu.xml" value="0.25416666666666665" />
       </map>

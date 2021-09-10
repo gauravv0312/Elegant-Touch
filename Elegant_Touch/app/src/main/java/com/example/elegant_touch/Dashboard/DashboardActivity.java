@@ -22,6 +22,7 @@ import com.example.elegant_touch.databinding.ActivityDashboardBinding;
 import com.example.elegant_touch.product.MenActivity;
 import com.example.elegant_touch.product.ParlourActivity;
 import com.example.elegant_touch.product.SaloonActivity;
+import com.example.elegant_touch.product.WomenActivity;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -63,6 +64,15 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 finish();
             }
         });
+
+        binding.man.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), WomenActivity.class));
+                finish();
+            }
+        });
+
 
 //        drawer
         navigationDrawer();
