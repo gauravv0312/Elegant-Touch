@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Elegant_Touch"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".product.GirlActivity"
+            android:exported="true" />
+        <activity
             android:name=".product.BoyActivity"
             android:exported="true" />
         <activity
