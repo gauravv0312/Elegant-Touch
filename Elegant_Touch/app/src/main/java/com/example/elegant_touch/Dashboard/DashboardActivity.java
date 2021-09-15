@@ -19,6 +19,7 @@ import com.example.elegant_touch.Account.LoginActivity;
 import com.example.elegant_touch.Account.WelcomeActivity;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.ActivityDashboardBinding;
+import com.example.elegant_touch.product.BoyActivity;
 import com.example.elegant_touch.product.MenActivity;
 import com.example.elegant_touch.product.ParlourActivity;
 import com.example.elegant_touch.product.SaloonActivity;
@@ -70,6 +71,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), WomenActivity.class));
                 finish();
+            }
+        });
+
+        binding.boy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), BoyActivity.class));
             }
         });
 
