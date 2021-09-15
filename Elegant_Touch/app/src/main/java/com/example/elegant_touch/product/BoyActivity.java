@@ -6,9 +6,11 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.elegant_touch.Adapter.boyAdapter;
 import com.example.elegant_touch.Dashboard.DashboardActivity;
+import com.example.elegant_touch.Dashboard.PreviewActivity;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.ActivityBoyBinding;
 import com.example.elegant_touch.modelclass.boyModelClass;
@@ -18,20 +20,23 @@ import java.util.ArrayList;
 
 public class BoyActivity extends AppCompatActivity {
     ActivityBoyBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityBoyBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+//        ----------------------------------> RecyclerView <--------------------------------------------
         binding.recyclerview.setLayoutManager(new GridLayoutManager(this,2));
-        binding.recyclerview.setAdapter(new boyAdapter(boyModelClassArrayList()));
+        binding.recyclerview.setAdapter(new boyAdapter(boyModelClassArrayList(),getApplicationContext()));
     }
     public ArrayList<boyModelClass> boyModelClassArrayList(){
         ArrayList<boyModelClass> holder = new ArrayList<>();
         boyModelClass obj1 =new boyModelClass();
         obj1.setName("Cream");
         obj1.setPrice("Rs 500");
-        obj1.setImage(R.drawable.download);
+        obj1.setImage(R.drawable.pp);
         holder.add(obj1);
 
         boyModelClass obj2 =new boyModelClass();
