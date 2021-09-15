@@ -25,6 +25,11 @@ public class ProfileActivity extends AppCompatActivity {
         });
     }
 
+    public void backButton(View view){
+        startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
+        finish();
+    }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
