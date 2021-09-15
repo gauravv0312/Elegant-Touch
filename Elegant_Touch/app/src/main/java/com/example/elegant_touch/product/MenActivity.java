@@ -25,7 +25,7 @@ public class MenActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         GridLayoutManager gridLayoutManager =new GridLayoutManager(this,2);
         binding.recyclerview.setLayoutManager(gridLayoutManager);
-        binding.recyclerview.setAdapter(new menAdapter(menModelClassArrayList()));
+        binding.recyclerview.setAdapter(new menAdapter(menModelClassArrayList(),getApplicationContext()));
     }
     public ArrayList<menModelClass> menModelClassArrayList(){
         ArrayList<menModelClass> holder =new ArrayList<>();

@@ -25,7 +25,7 @@ public class WomenActivity extends AppCompatActivity {
         binding = ActivityWomenBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         binding.recyclerview.setLayoutManager(new GridLayoutManager(this,2));
-        binding.recyclerview.setAdapter(new womenAdapter(womenModelClassArrayList()));
+        binding.recyclerview.setAdapter(new womenAdapter(womenModelClassArrayList(),getApplicationContext()));
     }
     public ArrayList<womenModelClass> womenModelClassArrayList(){
         ArrayList<womenModelClass> holder =new ArrayList<>();

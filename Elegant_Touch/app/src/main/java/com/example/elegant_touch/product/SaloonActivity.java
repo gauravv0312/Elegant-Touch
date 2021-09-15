@@ -33,7 +33,7 @@ public class SaloonActivity extends AppCompatActivity {
         GridLayoutManager gridLayoutManager =new GridLayoutManager(this,2);
         binding.recyclerview.setLayoutManager(gridLayoutManager);
 
-        binding.recyclerview.setAdapter(new saloonAdapter(saloonModelClassArrayList()));
+        binding.recyclerview.setAdapter(new saloonAdapter(saloonModelClassArrayList(),getApplicationContext()));
     }
     public ArrayList<SaloonModelClass> saloonModelClassArrayList(){
         ArrayList<SaloonModelClass> holder = new ArrayList<>();

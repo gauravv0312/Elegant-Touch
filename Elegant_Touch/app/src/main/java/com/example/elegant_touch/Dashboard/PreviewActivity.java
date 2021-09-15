@@ -21,8 +21,8 @@ public class PreviewActivity extends AppCompatActivity {
         binding.textView11.setText(getIntent().getStringExtra("productname"));
         binding.textView12.setText(getIntent().getStringExtra("productprice"));
     }
-    public void backButton(View view){
-        startActivity(new Intent(getApplicationContext(), BoyActivity.class));
-        finish();
+
+    public void onBackPressed(View view) {
+        super.onBackPressed();
     }
 }

@@ -16,7 +16,7 @@
             android:id="@+id/backbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="backButton"
+            android:onClick="onBackPressed"
             android:padding="15dp"
             android:src="@drawable/ic_baseline_keyboard_backspace_24" />
 

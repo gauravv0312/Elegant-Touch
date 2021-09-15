@@ -1,5 +1,7 @@
 package com.example.elegant_touch.Adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.elegant_touch.Dashboard.PreviewActivity;
 import com.example.elegant_touch.R;
+import com.example.elegant_touch.modelclass.boyModelClass;
 import com.example.elegant_touch.modelclass.girlModelClass;
 
 import java.util.ArrayList;
@@ -17,9 +21,10 @@ import java.util.ArrayList;
 public class girlAdapter extends RecyclerView.Adapter<girlAdapter.girlViewHolder> {
 
     ArrayList<girlModelClass> girlModelClasses;
-
-    public girlAdapter(ArrayList<girlModelClass> girlModelClasses) {
+    Context context;
+    public girlAdapter(ArrayList<girlModelClass> girlModelClasses, Context applicationContext) {
         this.girlModelClasses = girlModelClasses;
+        this.context = applicationContext;
     }
 
     @NonNull
@@ -32,9 +37,22 @@ public class girlAdapter extends RecyclerView.Adapter<girlAdapter.girlViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull girlViewHolder holder, int position) {
+        final girlModelClass temp = girlModelClasses.get(position);
         holder.image.setImageResource(girlModelClasses.get(position).getImage());
         holder.productname.setText(girlModelClasses.get(position).getName());
         holder.productprice.setText(girlModelClasses.get(position).getPrice());
+        holder.image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(context, PreviewActivity.class);
+                intent.putExtra("imagename",temp.getImage());
+                intent.putExtra("productname",temp.getName());
+                intent.putExtra("productprice",temp.getPrice());
+
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
