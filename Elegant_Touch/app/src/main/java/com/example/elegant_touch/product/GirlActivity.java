@@ -1,6 +1,7 @@
 package com.example.elegant_touch.product;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,7 +23,8 @@ public class GirlActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityGirlBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.activity_girl);
+        setContentView(binding.getRoot());
+        binding.recyclerview.setLayoutManager(new GridLayoutManager(this,2));
         binding.recyclerview.setAdapter(new girlAdapter(girlModelClassArrayList()));
     }
     public ArrayList<girlModelClass> girlModelClassArrayList(){
