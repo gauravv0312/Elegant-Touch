@@ -151,8 +151,7 @@ public class GirlActivity extends AppCompatActivity {
         return holder;
     }
     public void backButton(View view){
-        startActivity(new Intent(getApplicationContext(),DashboardActivity.class));
-        finish();
+        super.onBackPressed();;
 
     }
 

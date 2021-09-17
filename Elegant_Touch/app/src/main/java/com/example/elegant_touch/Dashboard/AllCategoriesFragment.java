@@ -16,7 +16,12 @@ import android.widget.Toast;
 
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.FragmentAllCategoriesBinding;
+import com.example.elegant_touch.product.BoyActivity;
+import com.example.elegant_touch.product.GirlActivity;
+import com.example.elegant_touch.product.MenActivity;
 import com.example.elegant_touch.product.ParlourActivity;
+import com.example.elegant_touch.product.SaloonActivity;
+import com.example.elegant_touch.product.WomenActivity;
 
 public class AllCategoriesFragment extends Fragment {
     FragmentAllCategoriesBinding binding;
@@ -50,6 +55,41 @@ public class AllCategoriesFragment extends Fragment {
            @Override
            public void onClick(View v) {
                startActivity(new Intent(getContext(), ParlourActivity.class));
+           }
+       });
+
+       binding.cardSaloon.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               startActivity(new Intent(getContext(), SaloonActivity.class));
+           }
+       });
+
+       binding.cardMen.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               startActivity(new Intent(getContext(), MenActivity.class));
+           }
+       });
+
+       binding.cardWomen.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               startActivity(new Intent(getContext(), WomenActivity.class));
+           }
+       });
+
+       binding.cardGirl.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               startActivity(new Intent(getContext(), GirlActivity.class));
+           }
+       });
+
+       binding.cardBoy.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               startActivity(new Intent(getContext(), BoyActivity.class));
            }
        });
         return binding.getRoot();

@@ -160,8 +160,7 @@ public class SaloonActivity extends AppCompatActivity {
     }
 
     public void backButton(View view){
-        startActivity(new Intent(getApplicationContext(),DashboardActivity.class));
-        finish();
+        super.onBackPressed();
 
     }
 
