@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.FragmentAllCategoriesBinding;
+import com.example.elegant_touch.product.ParlourActivity;
 
 public class AllCategoriesFragment extends Fragment {
     FragmentAllCategoriesBinding binding;
@@ -44,6 +45,13 @@ public class AllCategoriesFragment extends Fragment {
        binding.cardSoap.setAnimation(right_anim);
        binding.cardShampoo.setAnimation(left_anim);
        binding.cardMakeup.setAnimation(right_anim);
-       return binding.getRoot();
+
+       binding.cardParlour.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               startActivity(new Intent(getContext(), ParlourActivity.class));
+           }
+       });
+        return binding.getRoot();
     }
 }

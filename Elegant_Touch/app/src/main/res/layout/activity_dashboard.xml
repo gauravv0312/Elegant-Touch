@@ -135,7 +135,7 @@
                                 android:layout_height="60dp"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="15dp"
-                                android:src="@drawable/parlour"/>
+                                android:src="@drawable/parlour" />
 
 
                             <TextView

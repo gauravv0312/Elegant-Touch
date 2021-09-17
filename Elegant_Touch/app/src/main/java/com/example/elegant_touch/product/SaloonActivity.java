@@ -158,15 +158,9 @@ public class SaloonActivity extends AppCompatActivity {
         holder.add(obj20);
         return holder;
     }
-    public void backButton(View view){
-        startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
-        finish();
-    }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
-        finish();
-    }
+    public void backButton(View view){
+            super.onBackPressed();
+            finish();
+        }
 }
