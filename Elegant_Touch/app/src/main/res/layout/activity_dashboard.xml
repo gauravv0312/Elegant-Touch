@@ -305,16 +305,24 @@
 
                     <TextView
                         android:id="@+id/offerHeader"
-                        android:layout_alignParentRight="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
                         android:fontFamily="@font/baloo_bhai"
                         android:text="Offers"
+                        android:layout_toLeftOf="@+id/offerLogo"
+                        android:layout_marginRight="10dp"
                         android:textColor="@color/black"
                         android:textSize="24sp"
-                        android:layout_marginRight="30dp"
                         android:textStyle="bold" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/offerLogo"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/offerlogo"
+                        android:layout_marginRight="20dp"/>
+
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:layout_below="@+id/offerHeader"
