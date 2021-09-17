@@ -298,10 +298,146 @@
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/offerRecyclerview"
+                <RelativeLayout
+
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/offerHeader"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:fontFamily="@font/baloo_bhai"
+                        android:text="Offers"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:layout_marginRight="30dp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_below="@+id/offerHeader"
+                        android:id="@+id/offerRecyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="3dp"
+                        app:cardMaxElevation="3dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/women1"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/woman" />
+
+                            <TextView
+                                android:id="@+id/textone1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/women1"
+                                android:layout_centerHorizontal="true"
+                                android:text="Women"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="3dp"
+                        app:cardMaxElevation="3dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/boy1"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/boy" />
+
+                            <TextView
+                                android:id="@+id/texttwo1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/boy1"
+                                android:layout_centerHorizontal="true"
+                                android:text="Boy"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="3dp"
+                        app:cardMaxElevation="3dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/girl1"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/girl" />
+
+                            <TextView
+                                android:id="@+id/textthree1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/girl1"
+                                android:layout_centerHorizontal="true"
+                                android:text="Girl"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+
+
+
             </LinearLayout>
 
         </ScrollView>

@@ -109,31 +109,31 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         ArrayList<offerModelClass> holder = new ArrayList<>();
         offerModelClass obj1 = new offerModelClass();
         obj1.setImage(R.drawable.offer1);
-        obj1.setOfferDetails("Limited Time Sale");
+        obj1.setOfferDetails("Limited Time Sale 30% off");
         holder.add(obj1);
 
         offerModelClass obj2 =new offerModelClass();
-        obj2.setOfferDetails("Limited Time Sale");
+        obj2.setOfferDetails("Limited Time Sale 50% off");
         obj2.setImage(R.drawable.offer2);
         holder.add(obj2);
 
         offerModelClass obj3 =new offerModelClass();
-        obj3.setOfferDetails("Limited Time Sale");
+        obj3.setOfferDetails("Limited Time Sale 60% off");
         obj3.setImage(R.drawable.offer3);
         holder.add(obj3);
 
         offerModelClass obj4 =new offerModelClass();
-        obj4.setOfferDetails("Limited Time Sale");
+        obj4.setOfferDetails("Limited Time Sale 30% off");
         obj4.setImage(R.drawable.offer1);
         holder.add(obj4);
 
         offerModelClass obj5 =new offerModelClass();
-        obj5.setOfferDetails("Limited Time Sale");
+        obj5.setOfferDetails("Limited Time Sale 50% off");
         obj5.setImage(R.drawable.offer2);
         holder.add(obj5);
 
         offerModelClass obj6 =new offerModelClass();
-        obj6.setOfferDetails("Limited Time Sale");
+        obj6.setOfferDetails("Limited Time Sale 60% off");
         obj6.setImage(R.drawable.offer3);
         holder.add(obj6);
         return holder;
