@@ -165,6 +165,5 @@ public class ParlourActivity extends AppCompatActivity {
         super.onBackPressed();
         startActivity(new Intent(getApplicationContext(),DashboardActivity.class));
         finish();
-
     }
 }
