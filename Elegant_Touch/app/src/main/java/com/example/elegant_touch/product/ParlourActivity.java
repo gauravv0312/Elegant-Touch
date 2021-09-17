@@ -25,7 +25,7 @@ public class ParlourActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityParlourBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-//        binding.recyclerview.setLayoutManager(new LinearLayoutManager(this));
+//      binding.recyclerview.setLayoutManager(new LinearLayoutManager(this));
         GridLayoutManager gridLayoutManager =new GridLayoutManager(this,2);
         binding.recyclerview.setLayoutManager(gridLayoutManager);
         binding.recyclerview.setAdapter(new parlourAdapter(parlourModelClassArrayList(),getApplicationContext()));

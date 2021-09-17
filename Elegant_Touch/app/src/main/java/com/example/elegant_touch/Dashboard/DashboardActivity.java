@@ -3,6 +3,8 @@ package com.example.elegant_touch.Dashboard;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -17,8 +19,11 @@ import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.elegant_touch.Account.LoginActivity;
 import com.example.elegant_touch.Account.WelcomeActivity;
+import com.example.elegant_touch.Adapter.offerAdapter;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.ActivityDashboardBinding;
+import com.example.elegant_touch.modelclass.offerModelClass;
+import com.example.elegant_touch.modelclass.offerModelClass;
 import com.example.elegant_touch.product.BoyActivity;
 import com.example.elegant_touch.product.GirlActivity;
 import com.example.elegant_touch.product.MenActivity;
@@ -96,6 +101,42 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         navigationDrawer();
 //      hide login id
         hideItem();
+        binding.offerRecyclerview.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL,false));
+        binding.offerRecyclerview.setAdapter(new offerAdapter(offerModelClassArrayList()));
+    }
+
+    public ArrayList<offerModelClass> offerModelClassArrayList(){
+        ArrayList<offerModelClass> holder = new ArrayList<>();
+        offerModelClass obj1 = new offerModelClass();
+        obj1.setImage(R.drawable.offer1);
+        obj1.setOfferDetails("Limited Time Sale");
+        holder.add(obj1);
+
+        offerModelClass obj2 =new offerModelClass();
+        obj2.setOfferDetails("Limited Time Sale");
+        obj2.setImage(R.drawable.offer2);
+        holder.add(obj2);
+
+        offerModelClass obj3 =new offerModelClass();
+        obj3.setOfferDetails("Limited Time Sale");
+        obj3.setImage(R.drawable.offer3);
+        holder.add(obj3);
+
+        offerModelClass obj4 =new offerModelClass();
+        obj4.setOfferDetails("Limited Time Sale");
+        obj4.setImage(R.drawable.offer1);
+        holder.add(obj4);
+
+        offerModelClass obj5 =new offerModelClass();
+        obj5.setOfferDetails("Limited Time Sale");
+        obj5.setImage(R.drawable.offer2);
+        holder.add(obj5);
+
+        offerModelClass obj6 =new offerModelClass();
+        obj6.setOfferDetails("Limited Time Sale");
+        obj6.setImage(R.drawable.offer3);
+        holder.add(obj6);
+        return holder;
     }
 
     private void navigationDrawer() {
