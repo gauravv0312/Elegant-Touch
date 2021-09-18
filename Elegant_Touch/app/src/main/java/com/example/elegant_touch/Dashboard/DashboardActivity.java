@@ -26,10 +26,14 @@ import com.example.elegant_touch.modelclass.offerModelClass;
 import com.example.elegant_touch.modelclass.offerModelClass;
 import com.example.elegant_touch.product.BoyActivity;
 import com.example.elegant_touch.product.GirlActivity;
+import com.example.elegant_touch.product.HairOilActivity;
+import com.example.elegant_touch.product.MakeupActivity;
 import com.example.elegant_touch.product.MenActivity;
 import com.example.elegant_touch.product.ParlourActivity;
 import com.example.elegant_touch.product.PerfumeActivity;
 import com.example.elegant_touch.product.SaloonActivity;
+import com.example.elegant_touch.product.ShampooActivity;
+import com.example.elegant_touch.product.SoapActivity;
 import com.example.elegant_touch.product.WomenActivity;
 import com.google.android.material.navigation.NavigationView;
 
@@ -189,6 +193,22 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 break;
             case R.id.perfume:
                 startActivity(new Intent(getApplicationContext(), PerfumeActivity.class));
+                finish();
+                break;
+            case R.id.shampoo:
+                startActivity(new Intent(getApplicationContext(), ShampooActivity.class));
+                finish();
+                break;
+            case R.id.oil:
+                startActivity(new Intent(getApplicationContext(), HairOilActivity.class));
+                finish();
+                break;
+            case R.id.makeup:
+                startActivity(new Intent(getApplicationContext(), MakeupActivity.class));
+                finish();
+                break;
+            case R.id.soap:
+                startActivity(new Intent(getApplicationContext(), SoapActivity.class));
                 finish();
                 break;
             default:

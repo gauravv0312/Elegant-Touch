@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.elegant_touch.Dashboard.PreviewActivity;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.modelclass.hairoilModelClass;
-import com.example.elegant_touch.modelclass.hairoilModelClass;
 
 import java.util.ArrayList;
 
@@ -55,7 +54,7 @@ public class hairoilAdapter extends RecyclerView.Adapter<hairoilAdapter.hairoilV
 
     @Override
     public int getItemCount() {
-        return 0;
+        return hairoilModelClasses.size();
     }
 
     class hairoilViewHolder extends RecyclerView.ViewHolder{

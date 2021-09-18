@@ -54,7 +54,7 @@ public class soapAdapter extends RecyclerView.Adapter<soapAdapter.soapViewHolder
 
     @Override
     public int getItemCount() {
-        return 0;
+        return soapModelClasses.size();
     }
 
     class soapViewHolder extends RecyclerView.ViewHolder{

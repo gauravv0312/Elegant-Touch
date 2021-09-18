@@ -56,7 +56,7 @@ public class makeupAdapter extends RecyclerView.Adapter<makeupAdapter.makeupView
 
     @Override
     public int getItemCount() {
-        return 0;
+        return makeupModelClasses.size();
     }
 
     class makeupViewHolder extends RecyclerView.ViewHolder{

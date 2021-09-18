@@ -58,7 +58,7 @@ public class shampooAdapter extends RecyclerView.Adapter<shampooAdapter.shampooV
 
     @Override
     public int getItemCount() {
-        return 0;
+        return shampooModelClasses.size();
     }
 
     class shampooViewHolder extends RecyclerView.ViewHolder{
