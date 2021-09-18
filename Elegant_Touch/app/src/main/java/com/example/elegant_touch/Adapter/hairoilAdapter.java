@@ -28,7 +28,7 @@ public class hairoilAdapter extends RecyclerView.Adapter<hairoilAdapter.hairoilV
     @Override
     public hairoilViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.makeupproduct,parent,false);
+        View view = layoutInflater.inflate(R.layout.hairoilproduct,parent,false);
         return new hairoilAdapter.hairoilViewHolder(view);
     }
 

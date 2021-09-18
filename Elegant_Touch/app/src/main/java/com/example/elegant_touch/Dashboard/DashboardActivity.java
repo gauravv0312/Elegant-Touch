@@ -13,7 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Toast;
+
 
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
@@ -22,7 +22,6 @@ import com.example.elegant_touch.Account.WelcomeActivity;
 import com.example.elegant_touch.Adapter.offerAdapter;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.ActivityDashboardBinding;
-import com.example.elegant_touch.modelclass.offerModelClass;
 import com.example.elegant_touch.modelclass.offerModelClass;
 import com.example.elegant_touch.product.BoyActivity;
 import com.example.elegant_touch.product.GirlActivity;
@@ -199,7 +198,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 startActivity(new Intent(getApplicationContext(), ShampooActivity.class));
                 finish();
                 break;
-            case R.id.oil:
+            case R.id.serum:
                 startActivity(new Intent(getApplicationContext(), HairOilActivity.class));
                 finish();
                 break;

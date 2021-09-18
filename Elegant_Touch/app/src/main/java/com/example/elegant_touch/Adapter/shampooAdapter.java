@@ -32,7 +32,7 @@ public class shampooAdapter extends RecyclerView.Adapter<shampooAdapter.shampooV
     @Override
     public shampooViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.makeupproduct,parent,false);
+        View view = layoutInflater.inflate(R.layout.shampooproduct,parent,false);
         return new shampooAdapter.shampooViewHolder(view);
     }
 

@@ -149,8 +149,8 @@ public class HairOilActivity extends AppCompatActivity {
         return holder;
     }
     public void backButton(View view){
-        super.onBackPressed();;
-
+        startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
+        finish();
     }
 
     @Override
