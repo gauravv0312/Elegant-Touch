@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.elegant_touch.Dashboard.PreviewActivity;
 import com.example.elegant_touch.R;
 
-import com.example.elegant_touch.modelclass.girlModelClass;
 import com.example.elegant_touch.modelclass.shampooModelClass;
 
 import java.util.ArrayList;
