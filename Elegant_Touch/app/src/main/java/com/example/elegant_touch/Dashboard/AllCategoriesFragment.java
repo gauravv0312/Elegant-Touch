@@ -18,9 +18,14 @@ import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.FragmentAllCategoriesBinding;
 import com.example.elegant_touch.product.BoyActivity;
 import com.example.elegant_touch.product.GirlActivity;
+import com.example.elegant_touch.product.HairOilActivity;
+import com.example.elegant_touch.product.MakeupActivity;
 import com.example.elegant_touch.product.MenActivity;
 import com.example.elegant_touch.product.ParlourActivity;
+import com.example.elegant_touch.product.PerfumeActivity;
 import com.example.elegant_touch.product.SaloonActivity;
+import com.example.elegant_touch.product.ShampooActivity;
+import com.example.elegant_touch.product.SoapActivity;
 import com.example.elegant_touch.product.WomenActivity;
 
 public class AllCategoriesFragment extends Fragment {
@@ -92,6 +97,36 @@ public class AllCategoriesFragment extends Fragment {
                startActivity(new Intent(getContext(), BoyActivity.class));
            }
        });
+       binding.cardPerfume.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               startActivity(new Intent(getContext(), PerfumeActivity.class));
+           }
+       });
+       binding.cardHair.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               startActivity(new Intent(getContext(), HairOilActivity.class));
+           }
+       });
+       binding.cardShampoo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), ShampooActivity.class));
+            }
+        });
+        binding.cardSoap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), SoapActivity.class));
+            }
+        });
+        binding.cardMakeup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), MakeupActivity.class));
+            }
+        });
         return binding.getRoot();
     }
 }
