@@ -13,6 +13,21 @@
         android:theme="@style/Theme.Elegant_Touch"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".product.SoapActivity"
+            android:exported="true" />
+        <activity
+            android:name=".product.HairOilActivity"
+            android:exported="true" />
+        <activity
+            android:name=".product.ShampooActivity"
+            android:exported="true" />
+        <activity
+            android:name=".product.MakeupActivity"
+            android:exported="true" />
+        <activity
+            android:name=".product.PerfumeActivity"
+            android:exported="true" />
+        <activity
             android:name=".Dashboard.PreviewActivity"
             android:exported="true" />
         <activity
