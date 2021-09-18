@@ -28,6 +28,7 @@ import com.example.elegant_touch.product.BoyActivity;
 import com.example.elegant_touch.product.GirlActivity;
 import com.example.elegant_touch.product.MenActivity;
 import com.example.elegant_touch.product.ParlourActivity;
+import com.example.elegant_touch.product.PerfumeActivity;
 import com.example.elegant_touch.product.SaloonActivity;
 import com.example.elegant_touch.product.WomenActivity;
 import com.google.android.material.navigation.NavigationView;
@@ -104,7 +105,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         binding.offerRecyclerview.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL,false));
         binding.offerRecyclerview.setAdapter(new offerAdapter(offerModelClassArrayList()));
     }
-
+//------------------------------------------------------------> offer <--------------------------------------------------------------------
     public ArrayList<offerModelClass> offerModelClassArrayList(){
         ArrayList<offerModelClass> holder = new ArrayList<>();
         offerModelClass obj1 = new offerModelClass();
@@ -184,6 +185,10 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 break;
             case R.id.menu_login:
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                finish();
+                break;
+            case R.id.perfume:
+                startActivity(new Intent(getApplicationContext(), PerfumeActivity.class));
                 finish();
                 break;
             default:

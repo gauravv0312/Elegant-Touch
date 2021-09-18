@@ -1,5 +1,6 @@
 package com.example.elegant_touch.Adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.modelclass.offerModelClass;
+import com.example.elegant_touch.modelclass.perfumeModelClass;
 
 import java.util.ArrayList;
 
@@ -20,6 +22,7 @@ public class offerAdapter extends RecyclerView.Adapter<offerAdapter.offerViewHol
     public offerAdapter(ArrayList<offerModelClass> offerModelClasses) {
         this.offerModelClasses = offerModelClasses;
     }
+
 
     @NonNull
     @Override
