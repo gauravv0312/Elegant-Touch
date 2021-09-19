@@ -214,6 +214,12 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 startActivity(new Intent(getApplicationContext(), SoapActivity.class));
                 finish();
                 break;
+            case R.id.share:
+                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Text");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject");
+                startActivity(Intent.createChooser(sharingIntent, "Share using"));
             default:
         }
 
