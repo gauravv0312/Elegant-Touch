@@ -35,6 +35,7 @@ import com.example.elegant_touch.product.ShampooActivity;
 import com.example.elegant_touch.product.SoapActivity;
 import com.example.elegant_touch.product.WomenActivity;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -104,11 +105,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 //        drawer
         navigationDrawer();
 //      hide login id
-        hideItem();
+//        hideItem();
+
+// ------------------------------------------------------------> offer <--------------------------------------------------------------------
+
         binding.offerRecyclerview.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL,false));
         binding.offerRecyclerview.setAdapter(new offerAdapter(offerModelClassArrayList()));
     }
-//------------------------------------------------------------> offer <--------------------------------------------------------------------
     public ArrayList<offerModelClass> offerModelClassArrayList(){
         ArrayList<offerModelClass> holder = new ArrayList<>();
         offerModelClass obj1 = new offerModelClass();
@@ -175,8 +178,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId())
         {
+//            case R.id.menu_logout:
+//                logout_account();
+//                break;
             case R.id.menu_logout:
-                logout_account();
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
+                finish();
                 break;
             case R.id.menu_category:
                 startActivity(new Intent(getApplicationContext(),CategoryActivity.class));
@@ -216,25 +224,25 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         return true;
     }
 
-    public void logout_account() {
-        SharedPreferences sharedPreferences = getSharedPreferences("credentials",MODE_PRIVATE);
-        if (sharedPreferences.contains("username"))
-        {
-            SharedPreferences.Editor editor =sharedPreferences.edit();
-            editor.remove("username");
-            editor.putString("msg","Logout Successfully");
-            editor.commit();
-            startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
-            finish();
-        }
-    }
+//    public void logout_account() {
+//        SharedPreferences sharedPreferences = getSharedPreferences("credentials",MODE_PRIVATE);
+//        if (sharedPreferences.contains("username"))
+//        {
+//            SharedPreferences.Editor editor =sharedPreferences.edit();
+//            editor.remove("username");
+//            editor.putString("msg","Logout Successfully");
+//            editor.commit();
+//            startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
+//            finish();
+//        }
+//    }
 
-    private void hideItem() {
-        SharedPreferences sharedPreferences = getSharedPreferences("credentials", MODE_PRIVATE);
-        if (sharedPreferences.contains("username")) {
-            Menu nav_Menu = binding.navigationView.getMenu();
-            nav_Menu.findItem(R.id.menu_login).setVisible(false);
-        }
-    }
+//    private void hideItem() {
+//        SharedPreferences sharedPreferences = getSharedPreferences("credentials", MODE_PRIVATE);
+//        if (sharedPreferences.contains("username")) {
+//            Menu nav_Menu = binding.navigationView.getMenu();
+//            nav_Menu.findItem(R.id.menu_login).setVisible(false);
+//        }
+//    }
 
 }
