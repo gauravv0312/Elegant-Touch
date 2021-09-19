@@ -24,72 +24,99 @@ import retrofit2.Response;
 
 public class LoginFragment extends Fragment {
     FragmentLoginBinding binding;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentLoginBinding.inflate(inflater,container,false);
+        binding = FragmentLoginBinding.inflate(inflater, container, false);
         binding.newuser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(),RegisterActivity.class));
+                startActivity(new Intent(getContext(), RegisterActivity.class));
                 getActivity().finish();
-            }
-        });
-        verifyuserexistance();
-        binding.btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String Email= binding.loginEmail.getText().toString().trim();
-                String Password= binding.loginPassword.getText().toString().trim();
-                processlogin(Email,Password);
             }
         });
         return binding.getRoot();
     }
-
-    public void processlogin(String email, String password) {
-        Call<login_response_model> call =apicontroller.getInstance()
-                                          .getapi()
-                                          .getlogin(email,password);
-
-        call.enqueue(new Callback<login_response_model>() {
-            @Override
-            public void onResponse(Call<login_response_model> call, Response<login_response_model> response) {
-                login_response_model obj= response.body();
-                String result = obj.getMessage().trim();
-                if (result.equals("exist"))
-                {
-                    SharedPreferences sharedPreferences = getActivity().getSharedPreferences("credentials",MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putString("username",email);
-                    editor.putString("password",password);
-                    editor.commit();
-                    editor.apply();
-                    startActivity(new Intent(getContext(), LoaderActivity.class));
-                    getActivity().finish();
-                }
-                if (result.equals("not exist"))
-                {
-                    binding.loginEmail.setText("");
-                    binding.loginPassword.setText("");
-                    Toast.makeText(getContext(),"Check your password", Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<login_response_model> call, Throwable t) {
-                Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    public void verifyuserexistance()
-    {
-        SharedPreferences sharedPreferences =getContext().getSharedPreferences("credentials",MODE_PRIVATE);
-        if (sharedPreferences.contains("username"))
-        {
-            startActivity(new Intent(getContext(),DashboardActivity.class));
-            getActivity().finish();
-        }
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------------------------------------------> This code will use when we use retrofit api <-------------------------------------------------
+
+//        verifyuserexistance();
+//        binding.btnLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String Email= binding.loginEmail.getText().toString().trim();
+//                String Password= binding.loginPassword.getText().toString().trim();
+//                processlogin(Email,Password);
+//            }
+//        });
+//        return binding.getRoot();
+//    }
+//
+//    public void processlogin(String email, String password) {
+//        Call<login_response_model> call =apicontroller.getInstance()
+//                                          .getapi()
+//                                          .getlogin(email,password);
+//
+//        call.enqueue(new Callback<login_response_model>() {
+//            @Override
+//            public void onResponse(Call<login_response_model> call, Response<login_response_model> response) {
+//                login_response_model obj= response.body();
+//                String result = obj.getMessage().trim();
+//                if (result.equals("exist"))
+//                {
+//                    SharedPreferences sharedPreferences = getActivity().getSharedPreferences("credentials",MODE_PRIVATE);
+//                    SharedPreferences.Editor editor = sharedPreferences.edit();
+//                    editor.putString("username",email);
+//                    editor.putString("password",password);
+//                    editor.commit();
+//                    editor.apply();
+//                    startActivity(new Intent(getContext(), LoaderActivity.class));
+//                    getActivity().finish();
+//                }
+//                if (result.equals("not exist"))
+//                {
+//                    binding.loginEmail.setText("");
+//                    binding.loginPassword.setText("");
+//                    Toast.makeText(getContext(),"Check your password", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<login_response_model> call, Throwable t) {
+//                Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//    }
+//
+//    public void verifyuserexistance()
+//    {
+//        SharedPreferences sharedPreferences =getContext().getSharedPreferences("credentials",MODE_PRIVATE);
+//        if (sharedPreferences.contains("username"))
+//        {
+//            startActivity(new Intent(getContext(),DashboardActivity.class));
+//            getActivity().finish();
+//        }
+//    }
+
