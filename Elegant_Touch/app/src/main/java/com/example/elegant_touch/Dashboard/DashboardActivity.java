@@ -178,14 +178,10 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId())
         {
-//            case R.id.menu_logout:
-//                logout_account();
-//                break;
             case R.id.menu_logout:
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
-                finish();
+                logout_account();
                 break;
+
             case R.id.menu_category:
                 startActivity(new Intent(getApplicationContext(),CategoryActivity.class));
                 finish();
@@ -224,25 +220,25 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         return true;
     }
 
-//    public void logout_account() {
-//        SharedPreferences sharedPreferences = getSharedPreferences("credentials",MODE_PRIVATE);
-//        if (sharedPreferences.contains("username"))
-//        {
-//            SharedPreferences.Editor editor =sharedPreferences.edit();
-//            editor.remove("username");
-//            editor.putString("msg","Logout Successfully");
-//            editor.commit();
-//            startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
-//            finish();
-//        }
-//    }
+    public void logout_account() {
+        SharedPreferences sharedPreferences = getSharedPreferences("credentials",MODE_PRIVATE);
+        if (sharedPreferences.contains("username"))
+        {
+            SharedPreferences.Editor editor =sharedPreferences.edit();
+            editor.remove("username");
+            editor.putString("msg","Logout Successfully");
+            editor.commit();
+            startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
+            finish();
+        }
+    }
 
-//    private void hideItem() {
-//        SharedPreferences sharedPreferences = getSharedPreferences("credentials", MODE_PRIVATE);
-//        if (sharedPreferences.contains("username")) {
-//            Menu nav_Menu = binding.navigationView.getMenu();
-//            nav_Menu.findItem(R.id.menu_login).setVisible(false);
-//        }
-//    }
+    private void hideItem() {
+        SharedPreferences sharedPreferences = getSharedPreferences("credentials", MODE_PRIVATE);
+        if (sharedPreferences.contains("username")) {
+            Menu nav_Menu = binding.navigationView.getMenu();
+            nav_Menu.findItem(R.id.menu_login).setVisible(false);
+        }
+    }
 
 }
