@@ -105,7 +105,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 //        drawer
         navigationDrawer();
 //      hide login id
-//        hideItem();
+        hideItem();
 
 // ------------------------------------------------------------> offer <--------------------------------------------------------------------
 
