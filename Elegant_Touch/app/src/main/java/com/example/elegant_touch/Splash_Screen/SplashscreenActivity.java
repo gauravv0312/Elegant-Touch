@@ -11,7 +11,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 import com.example.elegant_touch.Account.WelcomeActivity;
-import com.example.elegant_touch.Dashboard.DashboardActivity;
 import com.example.elegant_touch.Onboarding_Screen.OnboardingScreenActivity;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.ActivitySplashscreenBinding;

@@ -15,10 +15,6 @@ import com.example.elegant_touch.Dashboard.DashboardActivity;
 import com.example.elegant_touch.LoaderActivity;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.ActivityLoginBinding;
-import com.example.elegant_touch.databinding.FragmentLoginBinding;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 import retrofit2.Call;
@@ -27,14 +23,14 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
     ActivityLoginBinding binding;
-    FirebaseAuth fAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
-        fAuth = FirebaseAuth.getInstance();
+
         setContentView(binding.getRoot());
 
         binding.newuser.setOnClickListener(new View.OnClickListener() {

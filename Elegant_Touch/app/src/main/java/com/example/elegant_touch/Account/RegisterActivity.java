@@ -12,11 +12,7 @@ import android.widget.Toast;
 
 
 import com.example.elegant_touch.LoaderActivity;
-import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.ActivityRegisterBinding;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -29,7 +25,6 @@ public class RegisterActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         binding = ActivityRegisterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        getSupportFragmentManager().beginTransaction().replace(R.id.registercontainer,new RegisterFragment()).commit();
         binding.already.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,17 +44,17 @@ public class RegisterActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(name))
                 {
                     binding.signFullname.setError("Name is required");
-//                    return;
+                    return;
                 }
                 else if (TextUtils.isEmpty(Email))
                 {
                     binding.signEmail.setError("Name is required");
-//                    return;
+                    return;
                 }
                 else if (TextUtils.isEmpty(Phone))
                 {
                     binding.signPassword.setError("Name is required");
-//                    return;
+                    return;
                 }
                 else {
                     userregister(name,Email,Password,Phone,address);
