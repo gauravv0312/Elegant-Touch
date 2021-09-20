@@ -98,4 +98,11 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
+        finish();
+    }
 }

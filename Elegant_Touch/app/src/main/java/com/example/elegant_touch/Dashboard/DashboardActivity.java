@@ -220,6 +220,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Text");
                 sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject");
                 startActivity(Intent.createChooser(sharingIntent, "Share using"));
+                break;
             default:
         }
 
