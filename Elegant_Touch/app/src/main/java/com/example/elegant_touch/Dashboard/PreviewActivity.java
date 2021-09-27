@@ -16,7 +16,8 @@ import org.w3c.dom.Text;
 
 public class PreviewActivity extends AppCompatActivity {
     ActivityPreviewBinding binding;
-
+    ImageView previewImage;
+    TextView previewText1,previewText2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,17 +26,20 @@ public class PreviewActivity extends AppCompatActivity {
         binding.imageView4.setImageResource(getIntent().getIntExtra("imagename",0));
         binding.textView11.setText(getIntent().getStringExtra("productname"));
         binding.textView12.setText(getIntent().getStringExtra("productprice"));
-        binding.addToCart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(), CartActivity.class);
-                intent.putExtra("imagename",R.id.imageView4);
-                intent.putExtra("productname",R.id.textView11);
-                intent.putExtra("productprice",R.id.textView12);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                getApplicationContext().startActivity(intent);
-            }
-        });
+//        previewImage = findViewById(R.id.imageView4);
+//        previewText1 = findViewById(R.id.textView11);
+//        previewText2 = findViewById(R.id.textView12);
+//        binding.addToCart.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent =new Intent(getApplicationContext(), CartActivity.class);
+//                intent.putExtra("imagename",previewImage.setImageResource());
+//                intent.putExtra("cartproductname",);
+//                intent.putExtra("cartproductprice",);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                getApplicationContext().startActivity(intent);
+//            }
+//        });
 
     }
 

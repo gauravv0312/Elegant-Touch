@@ -28,8 +28,8 @@ public class CartActivity extends AppCompatActivity {
         ArrayList<cartModelClass> holder = new ArrayList<>();
         cartModelClass obj1 =new cartModelClass();
         obj1.setImage(getIntent().getIntExtra("imagename",0));
-        obj1.setName(getIntent().getStringExtra("productname"));
-        obj1.setPrice(getIntent().getStringExtra("productprice"));
+        obj1.setName(getIntent().getStringExtra("cartproductname"));
+        obj1.setPrice(getIntent().getStringExtra("cartproductprice"));
         holder.add(obj1);
         return holder;
     }
