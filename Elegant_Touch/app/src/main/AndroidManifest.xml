@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Elegant_Touch"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Dashboard.CartActivity"
+            android:exported="true" />
+        <activity
             android:name=".product.SoapActivity"
             android:exported="true" />
         <activity
