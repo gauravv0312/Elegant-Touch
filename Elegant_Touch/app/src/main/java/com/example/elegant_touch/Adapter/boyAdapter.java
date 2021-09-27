@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.elegant_touch.Dashboard.PreviewActivity;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.modelclass.boyModelClass;
+import com.example.elegant_touch.modelclass.cartModelClass;
 
 import java.util.ArrayList;
 
@@ -26,6 +27,7 @@ public class boyAdapter extends RecyclerView.Adapter<boyAdapter.boyViewHolder>{
         this.boyModelClasses = boyModelClasses;
         this.context = applicationContext;
     }
+
 
     @NonNull
     @Override
