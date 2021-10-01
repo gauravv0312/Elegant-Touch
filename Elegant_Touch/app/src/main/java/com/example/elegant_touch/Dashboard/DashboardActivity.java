@@ -6,9 +6,11 @@ import androidx.core.view.GravityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,11 +39,14 @@ import com.example.elegant_touch.product.WomenActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.razorpay.Checkout;
+import com.razorpay.PaymentResultListener;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener , PaymentResultListener {
      ActivityDashboardBinding binding;
     List<SlideModel> slideModels = new ArrayList<SlideModel>();
     @Override
@@ -224,6 +229,8 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject");
                 startActivity(Intent.createChooser(sharingIntent, "Share using"));
                 break;
+            case R.id.online:
+                startPayment();
             default:
         }
 
@@ -251,4 +258,53 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         }
     }
 
+    public void startPayment() {
+        Checkout checkout = new Checkout();
+        checkout.setKeyID("m3ZSJxr01qojvokuWceqR0uS");
+        /**
+         * Instantiate Checkout
+         */
+
+
+
+        checkout.setImage(R.drawable.logo);
+
+        final Activity activity = this;
+
+        /**
+         * Pass your payment options to the Razorpay Checkout as a JSONObject
+         */
+        try {
+            JSONObject options = new JSONObject();
+
+            options.put("name", "Elegant Touch");
+            options.put("description", "Reference No. #123456");
+            options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.png");
+//            options.put("order_id", "order_DBJOWzybf0sJbb");//from response of step 3.
+            options.put("theme.color", "#3399cc");
+            options.put("currency", "INR");
+            options.put("amount", "50000");//pass amount in currency subunits
+            options.put("prefill.email", "gaurav.kumar@example.com");
+            options.put("prefill.contact","9996629014");
+            JSONObject retryObj = new JSONObject();
+            retryObj.put("enabled", true);
+            retryObj.put("max_count", 4);
+            options.put("retry", retryObj);
+
+            checkout.open(activity, options);
+
+        } catch(Exception e) {
+            Log.e("TAG", "Error in starting Razorpay Checkout", e);
+        }
+    }
+
+    @Override
+    public void onPaymentSuccess(String s) {
+        
+    }
+
+    @Override
+    public void onPaymentError(int i, String s) {
+
+    }
 }

@@ -63,6 +63,22 @@
     </menu>
 </item>
 
+<item android:title="Payment">
+    <menu>
+        <group android:checkableBehavior="none">
+            <item
+                android:id="@+id/online"
+                android:title="Online"
+                android:icon="@drawable/ic_baseline_payments_24"/>
+
+            <item
+                android:id="@+id/cod"
+                android:title="Cash On Delivery"
+                android:icon="@drawable/ic_baseline_payments_24"/>
+        </group>
+    </menu>
+</item>
+
 <item android:title="Share">
     <menu>
         <group android:checkableBehavior="none">
