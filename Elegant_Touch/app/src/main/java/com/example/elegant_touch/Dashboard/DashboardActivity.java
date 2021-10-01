@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 
 import com.denzcoskun.imageslider.constants.ScaleTypes;
@@ -231,6 +232,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 break;
             case R.id.online:
                 startPayment();
+                break;
             default:
         }
 
@@ -260,20 +262,10 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
     public void startPayment() {
         Checkout checkout = new Checkout();
-        checkout.setKeyID("m3ZSJxr01qojvokuWceqR0uS");
-        /**
-         * Instantiate Checkout
-         */
-
-
-
+        checkout.setKeyID("rzp_test_OqfuQX5n4s3cF9");
         checkout.setImage(R.drawable.logo);
-
         final Activity activity = this;
 
-        /**
-         * Pass your payment options to the Razorpay Checkout as a JSONObject
-         */
         try {
             JSONObject options = new JSONObject();
 
@@ -300,11 +292,12 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
     @Override
     public void onPaymentSuccess(String s) {
-        
+        Toast.makeText(getApplicationContext(), "Successfull Payment Id:"+s, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onPaymentError(int i, String s) {
+        Toast.makeText(getApplicationContext(), "failed Payment Id:"+s, Toast.LENGTH_SHORT).show();
 
     }
 }
