@@ -36,6 +36,7 @@ import com.example.elegant_touch.product.SoapActivity;
 import com.example.elegant_touch.product.WomenActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.razorpay.Checkout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +54,8 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         slideModels.add(new SlideModel(R.drawable.slider3, ScaleTypes.FIT));
         binding.imageSlider.setImageList(slideModels);
         setContentView(binding.getRoot());
+        Checkout.preload(getApplicationContext());
+
         binding.saloon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
