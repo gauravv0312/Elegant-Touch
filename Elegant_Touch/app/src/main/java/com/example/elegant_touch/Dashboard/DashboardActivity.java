@@ -113,8 +113,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
 //        drawer
         navigationDrawer();
+
 //      hide login id
-        hideItem();
+//        hideItem();
 
 // ------------------------------------------------------------> offer <--------------------------------------------------------------------
 
@@ -250,16 +251,18 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
             finish();
         }
+        Toast.makeText(getApplicationContext(), "Logout", Toast.LENGTH_SHORT).show();
     }
 
-    private void hideItem() {
-        SharedPreferences sharedPreferences = getSharedPreferences("credentials", MODE_PRIVATE);
-        if (sharedPreferences.contains("username")) {
-            Menu nav_Menu = binding.navigationView.getMenu();
-            nav_Menu.findItem(R.id.menu_login).setVisible(false);
-        }
-    }
-
+//    ----------------------------------------------------------------------> for hiding the login button in drawer <-----------------------------------------------------------------------
+//    private void hideItem() {
+//        SharedPreferences sharedPreferences = getSharedPreferences("credentials", MODE_PRIVATE);
+//        if (sharedPreferences.contains("username")) {
+//            Menu nav_Menu = binding.navigationView.getMenu();
+//            nav_Menu.findItem(R.id.menu_login).setVisible(false);
+//        }
+//    }
+//    ---------------------------------------------------------------------------><----------------------------------------------------------------------------------------------------
     public void startPayment() {
         Checkout checkout = new Checkout();
         checkout.setKeyID("rzp_test_OqfuQX5n4s3cF9");
