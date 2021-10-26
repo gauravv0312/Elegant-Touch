@@ -200,10 +200,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
                 finish();
                 break;
-            case R.id.menu_login:
-                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                finish();
-                break;
+//                --------------------------------><------------------------------------------------
+//            case R.id.menu_login:
+//                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+//                finish();
+//                break;
+//                --------------------------------><------------------------------------------------
+
             case R.id.perfume:
                 startActivity(new Intent(getApplicationContext(), PerfumeActivity.class));
                 finish();
