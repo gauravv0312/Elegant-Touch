@@ -12,8 +12,8 @@ public interface apiset {
     Call<signup_response_mode> getregister(
       @Field("name") String name,
       @Field("email") String email,
-      @Field("mobile") String mobile,
       @Field("password") String password,
+      @Field("mobile") String mobile,
       @Field("address") String address
     );
 
