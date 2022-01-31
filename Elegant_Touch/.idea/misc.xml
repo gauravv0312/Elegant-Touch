@@ -38,7 +38,7 @@
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_perfume.xml" value="0.23233695652173914" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_preview.xml" value="0.23233695652173914" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_profile.xml" value="0.21516754850088182" />
-        <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_register.xml" value="0.23233695652173914" />
+        <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_saloon.xml" value="0.18885869565217392" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_shampoo.xml" value="0.23233695652173914" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/activity_soap.xml" value="0.23233695652173914" />
@@ -51,6 +51,9 @@
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/fragment_category.xml" value="0.17300724637681159" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/fragment_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/fragment_onboarding1_.xml" value="0.15896739130434784" />
+        <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/fragment_onboarding2_.xml" value="0.15896739130434784" />
+        <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/fragment_onboarding3_.xml" value="0.15896739130434784" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/fragment_order.xml" value="0.17300724637681159" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/fragment_profile.xml" value="0.16666666666666666" />
         <entry key="..\:/Github/Elegant-Touch/Elegant_Touch/app/src/main/res/layout/fragment_register.xml" value="0.19882246376811594" />

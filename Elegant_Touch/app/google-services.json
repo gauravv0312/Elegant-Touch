@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "834705349642",
-    "project_id": "elegant-touch-2623f",
-    "storage_bucket": "elegant-touch-2623f.appspot.com"
+    "project_number": "43678148283",
+    "project_id": "eleganttouch-15c17",
+    "storage_bucket": "eleganttouch-15c17.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:834705349642:android:8a231ead924b64b04d13f3",
+        "mobilesdk_app_id": "1:43678148283:android:5bc30d83c0602a8bf5eb9e",
         "android_client_info": {
           "package_name": "com.example.elegant_touch"
         }
       },
       "oauth_client": [
         {
-          "client_id": "834705349642-vdgkc28aaugh5tsoqbf48hmup6jlnk6h.apps.googleusercontent.com",
+          "client_id": "43678148283-2qubp15mjft4j0d43ar06spldsptu17i.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBdFPDsV7-i_f9hewRiaGGspbrbX4Wa8qw"
+          "current_key": "AIzaSyByE0LdUa-3plNnYEqza-9iL39rptJd7Zg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "834705349642-vdgkc28aaugh5tsoqbf48hmup6jlnk6h.apps.googleusercontent.com",
+              "client_id": "43678148283-2qubp15mjft4j0d43ar06spldsptu17i.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

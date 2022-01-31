@@ -15,6 +15,9 @@ import com.example.elegant_touch.Dashboard.DashboardActivity;
 import com.example.elegant_touch.LoaderActivity;
 import com.example.elegant_touch.R;
 import com.example.elegant_touch.databinding.ActivityLoginBinding;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 import retrofit2.Call;
@@ -23,7 +26,7 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
     ActivityLoginBinding binding;
-
+    FirebaseAuth fAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,61 +47,86 @@ public class LoginActivity extends AppCompatActivity {
 
 //----------------------------------------------------------> This code will use when we use retrofit api <-------------------------------------------------
 
-        verifyuserexistance();
+      //  verifyuserexistance();
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String Email = binding.loginEmail.getText().toString().trim();
                 String Password = binding.loginPassword.getText().toString().trim();
-                processlogin(Email, Password);
+
+                if (TextUtils.isEmpty(Email))
+                {
+                    binding.loginEmail.setError("Email is required");
+                    return;
+                }
+                if (TextUtils.isEmpty(Password))
+                {
+                    binding.loginPassword.setError("Password is required");
+                    return;
+                }
+            //    processlogin(Email, Password);
+                fAuth.signInWithEmailAndPassword(Email,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful())
+                        {
+                            Toast.makeText(getApplicationContext(), "User Successfully logged in", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(),LoaderActivity.class));
+                            finish();
+                        }
+                        else {
+                            Toast.makeText(getApplicationContext(), "Error!"+task.getException(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             }
         });
 
     }
 
-    public void processlogin(String email, String password) {
-        Call<login_response_model> call = apicontroller.getInstance()
-                .getapi()
-                .getlogin(email, password);
-
-        call.enqueue(new Callback<login_response_model>() {
-            @Override
-            public void onResponse(Call<login_response_model> call, Response<login_response_model> response) {
-                login_response_model obj = response.body();
-                String result = obj.getMessage().trim();
-                if (result.equals("exist")) {
-                    SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("credentials", MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putString("username", email);
-                    editor.putString("password", password);
-                    editor.commit();
-                    editor.apply();
-                    startActivity(new Intent(getApplicationContext(), LoaderActivity.class));
-                    finish();
-                }
-                if (result.equals("not exist")) {
-                    binding.loginEmail.setText("");
-                    binding.loginPassword.setText("");
-                    Toast.makeText(getApplicationContext(), "Check your password", Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<login_response_model> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    public void verifyuserexistance() {
-        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("credentials", MODE_PRIVATE);
-        if (sharedPreferences.contains("username")) {
-            startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
-            finish();
-        }
-    }
-    @Override
-    public void onBackPressed() {
+//    public void processlogin(String email, String password) {
+//        Call<login_response_model> call = apicontroller.getInstance()
+//                .getapi()
+//                .getlogin(email, password);
+//
+//        call.enqueue(new Callback<login_response_model>() {
+//            @Override
+//            public void onResponse(Call<login_response_model> call, Response<login_response_model> response) {
+//                login_response_model obj = response.body();
+//                String result = obj.getMessage().trim();
+//                if (result.equals("exist")) {
+//                    SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("credentials", MODE_PRIVATE);
+//                    SharedPreferences.Editor editor = sharedPreferences.edit();
+//                    editor.putString("username", email);
+//                    editor.putString("password", password);
+//                    editor.commit();
+//                    editor.apply();
+//                    startActivity(new Intent(getApplicationContext(), LoaderActivity.class));
+//                    finish();
+//                }
+//                if (result.equals("not exist")) {
+//                    binding.loginEmail.setText("");
+//                    binding.loginPassword.setText("");
+//                    Toast.makeText(getApplicationContext(), "Check your password", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<login_response_model> call, Throwable t) {
+//                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//    }
+//
+//    public void verifyuserexistance() {
+//        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("credentials", MODE_PRIVATE);
+//        if (sharedPreferences.contains("username")) {
+//            startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
+//            finish();
+//        }
+//    }
+  @Override
+       public void onBackPressed() {
         super.onBackPressed();
         startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
         finish();
